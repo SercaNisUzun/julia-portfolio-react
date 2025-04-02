@@ -1,0 +1,47 @@
+@import 'mixins', 'variables';
+
+.navbar {
+    background-color: $bgColor;
+}
+
+ul {
+    padding: 25.6px 12.8px;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    background-color: $bgColor;
+    width: 100%;
+
+    #cv {
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    li {
+        list-style: none;
+        margin-bottom: 12.8px;
+        font-family: "Ubuntu", sans-serif;
+        font-optical-sizing: auto;
+    }
+}
+
+.navPosition {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 44.8px;
+
+    h2 {
+        font-family: "Fascinate", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 19.2px;
+        margin: 0;
+    }
+}
+
+#menuIcon {
+    font-size: 26px;
+    height: 26px;
+}
