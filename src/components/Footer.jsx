@@ -1,0 +1,37 @@
+import React from 'react'
+import wp from '../assets/Whatsapp.svg'
+import tg from '../assets/Telegram.svg'
+import mail from '../assets/Gmail.svg'
+import linked from '../assets/Linkedin.svg'
+
+function Footer() {
+    return (
+        <div className='footer'>
+
+            <h2 className='logo'>JULIA L-U</h2>
+
+            <ul>
+                <li>Главная</li>
+                <li>Портфолио</li>
+                <li id='cv'>Скачать CV</li>
+                <li>Обо мне</li>
+            </ul>
+
+            <div className='footerButtons'>
+                <button style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-Mail</button>
+                <button style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
+                <button style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>
+                <button style={{ gridArea: 'li' }}><img src={linked} alt="Linkedin" />LinkedIn</button>
+            </div>
+
+            <hr />
+
+            <p id='copyRight'>Copyright 2025</p>
+
+
+
+        </div>
+    )
+}
+
+export default Footer

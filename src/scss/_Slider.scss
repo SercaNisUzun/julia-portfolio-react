@@ -1,0 +1,34 @@
+@import 'mixins', 'variables';
+
+.slider-wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    border-top: 2px #00412D solid;
+    border-bottom: 2px #00412D solid;
+    width: max-content;
+    font-size: 12px;
+    font-family: Ubuntu;
+    padding: 11px 16px;
+    font-weight: 500;
+    line-height: 150%;
+    will-change: transform;
+    animation: scrolling 30s linear infinite;
+
+    @keyframes scrolling {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    img {
+        margin: 0 12.8px;
+        vertical-align: middle;
+    }
+}

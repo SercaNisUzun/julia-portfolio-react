@@ -2,12 +2,14 @@
 
 .navbar {
     background-color: $bgColor;
+    padding: 12.8px;
 }
 
 ul {
     padding: 25.6px 12.8px;
     margin: 0;
     position: absolute;
+    left: 0;
     z-index: 1;
     background-color: $bgColor;
     width: 100%;
@@ -31,14 +33,15 @@ ul {
     align-items: center;
     height: 44.8px;
 
-    h2 {
-        font-family: "Fascinate", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: 600;
-        font-style: normal;
-        font-size: 19.2px;
-        margin: 0;
-    }
+}
+
+.logo {
+    font-family: "Fascinate", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 19.2px;
+    margin: 0;
 }
 
 #menuIcon {

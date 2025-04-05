@@ -5,7 +5,7 @@ import { RxCross2 } from "react-icons/rx";
 
 function Header() {
 
-    const [mobileMenuToggle, setMobileMenuToogle] = useState(false);
+    const [mobileMenuToggle, setMobileMenuToogle] = useState(true);
 
     const [display, setDisplay] = useState("none");
 
@@ -24,7 +24,7 @@ function Header() {
 
             <div className='navPosition'>
                 <header>
-                    <h2>JULIA L-U</h2>
+                    <h2 className='logo'>JULIA L-U</h2>
                 </header>
 
                 <div id='menuIcon'>
