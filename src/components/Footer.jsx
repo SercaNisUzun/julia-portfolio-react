@@ -13,7 +13,7 @@ function Footer() {
             <ul>
                 <li>Главная</li>
                 <li>Портфолио</li>
-                <li id='cv'>Скачать CV</li>
+                <li style={{ textDecoration: 'underline', textUnderlineOffset: '2px' }}>Скачать CV</li>
                 <li>Обо мне</li>
             </ul>
 

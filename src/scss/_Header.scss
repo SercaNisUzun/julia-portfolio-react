@@ -5,27 +5,32 @@
     padding: 12.8px;
 }
 
-ul {
-    padding: 25.6px 12.8px;
-    margin: 0;
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    background-color: $bgColor;
-    width: 100%;
+nav {
+    ul {
+        padding: 25.6px 12.8px;
+        margin: 0;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        background-color: $bgColor;
+        width: 100%;
 
-    #cv {
-        text-decoration: underline;
-        text-underline-offset: 2px;
+        #cv {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 12.8px;
+            font-family: "Ubuntu", sans-serif;
+            font-optical-sizing: auto;
+        }
     }
 
-    li {
-        list-style: none;
-        margin-bottom: 12.8px;
-        font-family: "Ubuntu", sans-serif;
-        font-optical-sizing: auto;
-    }
 }
+
+
 
 .navPosition {
     display: flex;

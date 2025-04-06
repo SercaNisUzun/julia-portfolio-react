@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
+import { useNavigate } from 'react-router-dom';
 
 
 function Header() {
+
+    const navigate = useNavigate();
 
     const [mobileMenuToggle, setMobileMenuToogle] = useState(true);
 
@@ -38,7 +41,7 @@ function Header() {
                     <li>Главная</li>
                     <li>Портфолио</li>
                     <li id='cv'>Скачать CV</li>
-                    <li>Обо мне</li>
+                    <li onClick={() => navigate("aboutme")}>Обо мне</li>
                 </ul>
             </nav>
 
