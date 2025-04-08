@@ -3,9 +3,18 @@
 .navbar {
     background-color: $bgColor;
     padding: 12.8px;
+
+    @include respond-to(tablet) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
 }
 
 nav {
+
     ul {
         padding: 25.6px 12.8px;
         margin: 0;
@@ -14,6 +23,15 @@ nav {
         z-index: 1;
         background-color: $bgColor;
         width: 100%;
+
+        @include respond-to(tablet) {
+            position: static;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0;
+
+        }
 
         #cv {
             text-decoration: underline;
@@ -25,7 +43,16 @@ nav {
             margin-bottom: 12.8px;
             font-family: "Ubuntu", sans-serif;
             font-optical-sizing: auto;
+
+            @include respond-to(tablet) {
+                margin: 0;
+            }
+
         }
+    }
+
+    @include respond-to(tablet) {
+        width: 60%;
     }
 
 }
@@ -52,4 +79,8 @@ nav {
 #menuIcon {
     font-size: 26px;
     height: 26px;
+
+    @include respond-to(tablet) {
+        display: none;
+    }
 }

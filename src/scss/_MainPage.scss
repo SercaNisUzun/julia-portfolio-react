@@ -34,11 +34,14 @@
         line-height: 150%;
         margin: 16px 0;
         border: 2px #00412D solid;
+
+
     }
 }
 
 .mainPhoto {
     height: 300px;
+    height: 100%;
 
     img {
         width: 100%;
@@ -56,9 +59,14 @@
     }
 
     .projectCard {
-        border: 2px #00412D solid;
+        border: 1px #00412D solid;
         margin: 0 16px 24px 16px;
         padding: 12px;
+
+        @include respond-to(tablet) {
+            margin: 0;
+            width: 45%;
+        }
 
         img {
             width: 100%;
@@ -66,7 +74,7 @@
 
         .cardInfo {
             font-family: Ubuntu;
-            font-weight: 500;
+            font-weight: 400;
             font-size: 14px;
             margin: 0;
             line-height: 150%;
@@ -75,9 +83,14 @@
         .cardClick {
             text-align: end;
             color: #087A5B;
-            font-size: 17px;
+            font-size: 15px;
             font-family: Ubuntu;
             font-weight: 500;
+
+            p {
+                margin-top: 12.5px;
+                margin-bottom: 0;
+            }
         }
 
         .cardTitle {
@@ -99,5 +112,53 @@
 
         }
 
+    }
+}
+
+.mainDiv {
+    @include respond-to(tablet) {
+        display: flex;
+        height: 416px;
+        position: relative;
+
+        .mainPhoto {
+            order: 2;
+            width: 50%;
+
+            img {
+                max-height: 200%;
+                max-width: 100%;
+            }
+        }
+
+        .greenBg {
+            width: 50%;
+
+            .mainText {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60%;
+
+                .mainButton {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+        }
+
+
+    }
+}
+
+.projectCards {
+    @include respond-to(tablet) {
+        margin: 0 22.4px 38.4px 22.4px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 19.2px;
+        justify-content: space-around;
     }
 }
