@@ -50,20 +50,37 @@
 }
 
 .projectLinks {
+
+
+    @include respond-to(tablet) {
+        margin: 38.4px 44.8px;
+    }
+
+    @include respond-to(desktop) {
+        margin: 64px 96px;
+    }
+
     h2 {
         font-family: Ysabeau Infant;
         text-align: center;
         margin: 32px auto;
         width: 80%;
-
     }
 
     .projectCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         border: 1px #00412D solid;
         margin: 0 16px 24px 16px;
         padding: 12px;
 
         @include respond-to(tablet) {
+            margin: 0;
+            width: 44%;
+        }
+
+        @include respond-to(desktop) {
             margin: 0;
             width: 45%;
         }
@@ -151,10 +168,54 @@
 
 
     }
+
+    @include respond-to(desktop) {
+        display: flex;
+        height: 416px;
+        position: relative;
+
+        .mainPhoto {
+            order: 2;
+            width: 50%;
+
+            img {
+                max-height: 200%;
+                max-width: 100%;
+            }
+        }
+
+        .greenBg {
+            width: 50%;
+
+            .mainText {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 60%;
+
+                .mainButton {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+        }
+
+
+    }
 }
 
 .projectCards {
     @include respond-to(tablet) {
+        margin: 0 22.4px 38.4px 22.4px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 19.2px;
+        justify-content: space-around;
+    }
+
+    @include respond-to(desktop) {
         margin: 0 22.4px 38.4px 22.4px;
         display: flex;
         flex-wrap: wrap;

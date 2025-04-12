@@ -86,4 +86,22 @@
         }
 
     }
+
+    @include respond-to(desktop) {
+        display: flex;
+        margin: 0 38.4px;
+        justify-content: space-between;
+        align-items: start;
+
+        .footerAlt {
+            display: inherit;
+
+            ul {
+                margin: 0 38.4px;
+                padding: 0;
+            }
+
+        }
+
+    }
 }

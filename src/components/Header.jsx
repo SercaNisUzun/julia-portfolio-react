@@ -49,10 +49,11 @@ function Header() {
 
             <nav style={window.innerWidth < 768 ? { display: display } : {}}>
                 <ul>
-                    <li>Главная</li>
+                    <li className='onlyMobile'>Главная</li>
                     <li>Портфолио</li>
                     <li id='cv'>Скачать CV</li>
                     <li onClick={() => navigate("aboutme")}>Обо мне</li>
+                    <li className='mobileHidden'>Связаться со мной</li>
                 </ul>
             </nav>
         </div>

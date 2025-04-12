@@ -4,10 +4,42 @@
     background-color: $bgColor;
     padding: 12.8px;
 
+    .mobileHidden {
+        display: none;
+    }
+
     @include respond-to(tablet) {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 12.8px 44.8px;
+
+        .onlyMobile {
+            display: none;
+        }
+
+        .mobileHidden {
+            display: block;
+            border: 1px #00412D solid;
+            padding: 10px 18px;
+        }
+    }
+
+    @include respond-to(desktop) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12.8px 44.8px;
+
+        .onlyMobile {
+            display: none;
+        }
+
+        .mobileHidden {
+            display: block;
+            border: 1px #00412D solid;
+            padding: 10px 18px;
+        }
     }
 
 
@@ -28,9 +60,20 @@ nav {
             position: static;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             width: 100%;
             padding: 0;
+            font-size: 14px;
+        }
 
+        @include respond-to(desktop) {
+            position: static;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            font-size: 14px;
         }
 
         #cv {
@@ -48,11 +91,19 @@ nav {
                 margin: 0;
             }
 
+            @include respond-to(desktop) {
+                margin: 0;
+            }
+
         }
     }
 
     @include respond-to(tablet) {
-        width: 60%;
+        width: 65%;
+    }
+
+    @include respond-to(desktop) {
+        width: 65%;
     }
 
 }
@@ -81,6 +132,10 @@ nav {
     height: 26px;
 
     @include respond-to(tablet) {
+        display: none;
+    }
+
+    @include respond-to(desktop) {
         display: none;
     }
 }
