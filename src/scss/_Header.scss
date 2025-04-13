@@ -46,6 +46,23 @@
         }
     }
 
+    @include respond-to(large-desktop) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12.8px 44.8px;
+
+        .onlyMobile {
+            display: none;
+        }
+
+        .mobileHidden {
+            display: block;
+            border: 1px #00412D solid;
+            padding: 10px 18px;
+        }
+    }
+
 
 }
 
@@ -53,7 +70,6 @@ nav {
 
     ul {
         padding: 25.6px 12.8px;
-        margin: 0;
         position: absolute;
         left: 0;
         z-index: 1;
@@ -71,6 +87,16 @@ nav {
         }
 
         @include respond-to(desktop) {
+            position: static;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            font-size: 14px;
+        }
+
+        @include respond-to(large-desktop) {
             position: static;
             display: flex;
             justify-content: space-between;
@@ -99,6 +125,10 @@ nav {
                 margin: 0;
             }
 
+            @include respond-to(large-desktop) {
+                margin: 0;
+            }
+
         }
     }
 
@@ -107,6 +137,10 @@ nav {
     }
 
     @include respond-to(desktop) {
+        width: 65%;
+    }
+
+    @include respond-to(large-desktop) {
         width: 65%;
     }
 
@@ -120,6 +154,19 @@ nav {
     align-items: center;
     height: 44.8px;
     width: 100%;
+
+    @include respond-to(tablet) {
+        width: 30%;
+    }
+
+    @include respond-to(desktop) {
+        width: 30%;
+    }
+
+    @include respond-to(large-desktop) {
+        width: 30%;
+    }
+
 
 }
 
@@ -141,6 +188,10 @@ nav {
     }
 
     @include respond-to(desktop) {
+        display: none;
+    }
+
+    @include respond-to(large-desktop) {
         display: none;
     }
 }

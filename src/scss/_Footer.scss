@@ -14,12 +14,14 @@
         color: #FFFDF6;
         width: auto;
         padding: 25.6px 12.8px 25.6px 0;
+        margin: 0;
 
         li {
             list-style: none;
             font-family: Ubuntu;
-            font-size: 14.2px;
+            font-size: 16px;
             margin-bottom: 12px;
+            line-height: 150%;
 
         }
     }
@@ -88,6 +90,24 @@
     }
 
     @include respond-to(desktop) {
+        display: flex;
+        margin: 0 38.4px;
+        justify-content: space-between;
+        align-items: start;
+
+        .footerAlt {
+            display: inherit;
+
+            ul {
+                margin: 0 38.4px;
+                padding: 0;
+            }
+
+        }
+
+    }
+
+    @include respond-to(large-desktop) {
         display: flex;
         margin: 0 38.4px;
         justify-content: space-between;

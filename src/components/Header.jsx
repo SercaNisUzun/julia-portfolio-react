@@ -53,7 +53,7 @@ function Header() {
                     <li>Портфолио</li>
                     <li id='cv'>Скачать CV</li>
                     <li onClick={() => navigate("aboutme")}>Обо мне</li>
-                    <li className='mobileHidden'>Связаться со мной</li>
+                    <li className='mobileHidden' style={{ border: "2px solid #00412D" }}>Связаться со мной</li>
                 </ul>
             </nav>
         </div>

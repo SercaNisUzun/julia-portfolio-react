@@ -12,6 +12,10 @@
         height: 560px;
     }
 
+    @include respond-to(large-desktop) {
+        height: 560px;
+    }
+
     img {
         height: 100%;
         width: 100%;
@@ -32,8 +36,24 @@
             height: 54px;
             font-size: 12px;
             font-family: Ubuntu;
+            font-weight: 500;
             margin: 25.6px 0;
+
+            @include respond-to(tablet) {
+                height: 70px;
+            }
+
+            @include respond-to(desktop) {
+                height: 90px;
+            }
+
+            @include respond-to(large-desktop) {
+                height: 90px;
+            }
+
         }
+
+
 
         .boxBorder {
             border-right: 1px #00412D solid;
@@ -53,6 +73,10 @@
             }
 
             @include respond-to(desktop) {
+                border-right: 1px #00412D solid;
+            }
+
+            @include respond-to(large-desktop) {
                 border-right: 1px #00412D solid;
             }
         }
@@ -91,22 +115,48 @@
         }
     }
 
+    @include respond-to(large-desktop) {
+        display: flex;
+
+        .boxCutter {
+            width: 50%;
+        }
+
+        .onlyMobile {
+            display: none;
+        }
+    }
+
 
 }
 
 .aboutMeInfo {
     margin: 32px 16px;
     font-family: Ubuntu;
-    font-size: 12.8px;
+    font-size: 16px;
+    line-height: 150%;
     color: #00412D;
     font-weight: 400;
 
+    @include respond-to(desktop) {
+        margin: 32px 70px;
+    }
+
+    @include respond-to(large-desktop) {
+        margin: 32px 70px;
+    }
+
     h2 {
         font-family: Ysabeau Infant;
-        font-size: 24px;
+        font-size: 30px;
+
+        @include respond-to(tablet) {
+            font-weight: 600;
+        }
     }
 
     .aboutMe {
+
         @include respond-to(tablet) {
 
             margin: 52.2px 129.6px;
@@ -118,7 +168,16 @@
 
         @include respond-to(desktop) {
 
-            margin: 64px 296px;
+            margin: 64px 250px;
+
+            hr {
+                display: none;
+            }
+        }
+
+        @include respond-to(large-desktop) {
+
+            margin: 64px 250px;
 
             hr {
                 display: none;
@@ -129,6 +188,20 @@
     .aboutMe2 {
         @include respond-to(desktop) {
             display: flex;
+            justify-content: space-around;
+
+            h2 {
+                width: 50%;
+            }
+
+            p {
+                width: 40%;
+            }
+        }
+
+        @include respond-to(large-desktop) {
+            display: flex;
+            justify-content: space-around;
 
             h2 {
                 width: 50%;
@@ -143,9 +216,20 @@
     .cvArea {
         @include respond-to(desktop) {
             display: flex;
+            justify-content: space-between;
 
             h2 {
-                width: 50%;
+                width: 55%;
+            }
+
+        }
+
+        @include respond-to(large-desktop) {
+            display: flex;
+            justify-content: space-between;
+
+            h2 {
+                width: 55%;
             }
 
         }
@@ -156,13 +240,24 @@
 
 hr {
     margin: 32px 0;
+
+    @include respond-to(tablet) {
+        margin: 55px 0;
+    }
 }
 
 .projects {
+
+    p {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
     ul {
         max-width: fit-content;
         list-style: none;
         padding-inline-start: 0;
+        margin: 0;
     }
 
     div {
@@ -171,7 +266,40 @@ hr {
 
     h3 {
         font-family: Ysabeau Infant;
-        font-size: 17.6px;
+        font-size: 20px;
+        margin: 0;
+
+        @include respond-to(tablet) {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+    }
+
+    h4 {
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .company {
+        margin-bottom: 15px;
+
+        &>p {
+            margin: 0;
+        }
+    }
+
+    .content {
+        font-size: 15px;
+
+        .contentFix {
+            margin-bottom: 0;
+            font-weight: bold;
+
+            @include respond-to(tablet) {
+                margin-top: 0;
+            }
+        }
     }
 
     @include respond-to(tablet) {
@@ -184,7 +312,7 @@ hr {
         }
 
         .content {
-            width: 50%;
+            width: 60%;
         }
 
 
@@ -201,7 +329,24 @@ hr {
         }
 
         .content {
-            width: 50%;
+            width: 60%;
+        }
+
+
+    }
+
+    @include respond-to(large-desktop) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        width: 43%;
+
+        .company {
+            width: 30%;
+        }
+
+        .content {
+            width: 60%;
         }
 
 
@@ -225,6 +370,11 @@ hr {
         margin: auto;
     }
 
+    @include respond-to(large-desktop) {
+        width: 100%;
+        margin: auto;
+    }
+
     .footerButtons {
         margin-top: 32px;
 
@@ -232,9 +382,44 @@ hr {
             display: flex;
             justify-content: center;
             height: 44.8px;
+        }
+
+        @include respond-to(large-desktop) {
+            display: flex;
+            justify-content: center;
+            height: 44.8px;
 
         }
 
 
+    }
+}
+
+.sliderText {
+
+    @include respond-to(desktop) {
+        display: flex;
+        justify-content: center;
+
+        h2 {
+            width: 55%;
+        }
+
+        p {
+            width: 40%;
+        }
+    }
+
+    @include respond-to(large-desktop) {
+        display: flex;
+        justify-content: center;
+
+        h2 {
+            width: 55%;
+        }
+
+        p {
+            width: 40%;
+        }
     }
 }
