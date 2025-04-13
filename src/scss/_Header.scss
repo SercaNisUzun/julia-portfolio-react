@@ -3,6 +3,10 @@
 .navbar {
     background-color: $bgColor;
     padding: 12.8px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
 
     .mobileHidden {
         display: none;
@@ -115,6 +119,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 44.8px;
+    width: 100%;
 
 }
 
@@ -123,7 +128,7 @@ nav {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    font-size: 19.2px;
+    font-size: 24px;
     margin: 0;
 }
 
