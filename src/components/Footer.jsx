@@ -3,8 +3,12 @@ import wp from '../assets/Whatsapp.svg'
 import tg from '../assets/Telegram.svg'
 import mail from '../assets/Gmail.svg'
 import linked from '../assets/Linkedin.svg'
+import { useNavigate } from 'react-router-dom'
 
 function Footer() {
+
+    const navigate = useNavigate();
+
     return (
         <div className='footer'>
 
@@ -15,10 +19,10 @@ function Footer() {
                     <h2 className='logo'>JULIA L-U</h2>
 
                     <ul>
-                        <li>Главная</li>
+                        <li onClick={() => navigate("/")}>Главная</li>
                         <li>Портфолио</li>
                         <li style={{ textDecoration: 'underline', textUnderlineOffset: '2px' }}>Скачать CV</li>
-                        <li>Обо мне</li>
+                        <li onClick={() => navigate("aboutme")}>Обо мне</li>
                     </ul>
 
                 </div>

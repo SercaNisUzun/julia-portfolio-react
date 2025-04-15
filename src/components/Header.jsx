@@ -9,6 +9,11 @@ function Header() {
     const [mobileMenuToggle, setMobileMenuToogle] = useState(true);
     const [display, setDisplay] = useState("none");
 
+    const navigateAndCloseMenu = (path) => {
+        navigate(path);
+        changeDisplay();
+    };
+
     const changeDisplay = () => {
         if (mobileMenuToggle) {
             setDisplay("block");
@@ -35,7 +40,7 @@ function Header() {
         <div className='navbar'>
             <div className='navPosition'>
                 <header>
-                    <h2 className='logo'>JULIA L-U</h2>
+                    <h2 onClick={() => navigate("/")} className='logo'>JULIA L-U</h2>
                 </header>
 
                 <div id='menuIcon'>
@@ -49,14 +54,14 @@ function Header() {
 
             <nav style={window.innerWidth < 768 ? { display: display } : {}}>
                 <ul>
-                    <li className='onlyMobile'>Главная</li>
+                    <li onClick={() => navigateAndCloseMenu("/")} className='onlyMobile'>Главная</li>
                     <li>Портфолио</li>
                     <li id='cv'>Скачать CV</li>
-                    <li onClick={() => navigate("aboutme")}>Обо мне</li>
+                    <li onClick={() => navigateAndCloseMenu("aboutme")}>Обо мне</li>
                     <li className='mobileHidden' style={{ border: "2px solid #00412D" }}>Связаться со мной</li>
                 </ul>
             </nav>
-        </div>
+        </div >
     );
 }
 
