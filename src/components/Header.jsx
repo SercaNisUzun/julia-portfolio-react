@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from 'react-router-dom';
+import OutsideClickHandler from 'react-outside-click-handler';
 
 function Header() {
-
     const navigate = useNavigate();
     const [mobileMenuToggle, setMobileMenuToogle] = useState(true);
     const [display, setDisplay] = useState("none");
@@ -22,7 +22,6 @@ function Header() {
         }
         setMobileMenuToogle(!mobileMenuToggle);
     };
-
 
     useEffect(() => {
         const handleResize = () => {
@@ -52,16 +51,24 @@ function Header() {
                 </div>
             </div>
 
-            <nav style={window.innerWidth < 768 ? { display: display } : {}}>
-                <ul>
-                    <li onClick={() => navigateAndCloseMenu("/")} className='onlyMobile'>Главная</li>
-                    <li>Портфолио</li>
-                    <li id='cv'>Скачать CV</li>
-                    <li onClick={() => navigateAndCloseMenu("aboutme")}>Обо мне</li>
-                    <li className='mobileHidden' style={{ border: "2px solid #00412D" }}>Связаться со мной</li>
-                </ul>
-            </nav>
-        </div >
+            <OutsideClickHandler
+                onOutsideClick={() => {
+                    if (!mobileMenuToggle && window.innerWidth < 768) {
+                        changeDisplay();
+                    }
+                }}
+            >
+                <nav style={window.innerWidth < 768 ? { display: display } : {}}>
+                    <ul>
+                        <li onClick={() => navigateAndCloseMenu("/")} className='onlyMobile'>Главная</li>
+                        <li>Портфолио</li>
+                        <li id='cv'>Скачать CV</li>
+                        <li onClick={() => navigateAndCloseMenu("aboutme")}>Обо мне</li>
+                        <li className='mobileHidden' style={{ border: "2px solid #00412D" }}>Связаться со мной</li>
+                    </ul>
+                </nav>
+            </OutsideClickHandler>
+        </div>
     );
 }
 

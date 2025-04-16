@@ -63,6 +63,22 @@
         }
     }
 
+    div:nth-child(2) {
+        @include respond-to(tablet) {
+            width: 65%;
+        }
+
+        @include respond-to(desktop) {
+            width: 65%;
+        }
+
+        @include respond-to(large-desktop) {
+            width: 65%;
+        }
+
+    }
+
+
 
 }
 
@@ -131,19 +147,6 @@ nav {
 
         }
     }
-
-    @include respond-to(tablet) {
-        width: 65%;
-    }
-
-    @include respond-to(desktop) {
-        width: 65%;
-    }
-
-    @include respond-to(large-desktop) {
-        width: 65%;
-    }
-
 }
 
 
@@ -166,7 +169,6 @@ nav {
     @include respond-to(large-desktop) {
         width: 30%;
     }
-
 
 }
 
