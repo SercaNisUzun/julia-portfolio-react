@@ -3,9 +3,13 @@ import MainPhoto1 from '../assets/MainPhoto1.jpg'
 import Slider from '../components/Slider'
 import maree from '../assets/placeholder.jpg'
 import { RiArrowRightFill } from "react-icons/ri";
+import { useNavigate } from 'react-router-dom';
 
 
 function MainPage() {
+
+    const navigate = useNavigate();
+
     return (
 
         <div>
@@ -39,7 +43,7 @@ function MainPage() {
                 <h2>Создаю проекты,которые нравятся людям</h2>
 
                 <div className='projectCards'>
-                    <div className='projectCard'>
+                    <div onClick={() => navigate("/maree")} className='projectCard'>
                         <img src={maree} alt="" />
 
                         <div className='cardTitle'>

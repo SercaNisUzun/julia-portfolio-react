@@ -1,0 +1,178 @@
+@import 'mixins', 'variables';
+
+
+.maree {
+    font-family: Ubuntu;
+    line-height: 150%;
+
+    strong {
+        font-weight: 500;
+        margin-right: 3px;
+    }
+
+}
+
+.imgMaree {
+    height: 360px;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+
+    @include respond-to(tablet) {
+        height: 635.5px;
+    }
+
+    @include respond-to(desktop) {
+        height: 720px;
+    }
+}
+
+.mareeContent {
+    margin: 24px 16px 0 16px;
+
+    @include respond-to(tablet) {
+        margin: 44.8px;
+    }
+
+    @include respond-to(desktop) {
+        margin: 96px;
+    }
+
+    h2 {
+        margin-top: 32px;
+        margin-bottom: 16px;
+        font-size: 22px;
+        font-weight: 500
+    }
+
+    ul {
+        padding: 0;
+        list-style: disc;
+        list-style-position: outside;
+        padding-left: 16px;
+    }
+
+}
+
+.aboutText {
+    margin: 24px 16px 0 16px;
+
+    h2 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    button {
+        background-color: #FFFAF0;
+        border: 2px solid black;
+        font-family: Ubuntu;
+        padding: 12px;
+        font-size: 16px;
+        margin-top: 9.6px;
+    }
+
+    @include respond-to(tablet) {
+        width: 30%;
+        position: absolute;
+        top: 15%;
+        left: 32px;
+        line-height: normal;
+    }
+
+    @include respond-to(desktop) {
+        width: 30%;
+        position: absolute;
+        top: 15%;
+        left: 32px;
+        line-height: normal;
+    }
+
+}
+
+.greenBack {
+    color: #00412D;
+    font-size: 18px;
+    font-family: ubuntu;
+    @include greenBg;
+    border: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: 130px;
+    margin: 32px 0;
+}
+
+.greenBgText {
+    @include greenBg;
+    padding: 12.8px;
+
+    h2 {
+        margin: 0;
+    }
+
+
+    p {
+        margin: 0;
+    }
+}
+
+.liArrow {
+    font-size: 20px;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+.blockPic {
+    border: 1px solid #00412D;
+    background-color: white;
+    margin: 32px 0;
+    padding: 0 16px 32px 16px;
+
+    @include respond-to(tablet) {
+
+        display: flex;
+        justify-content: space-between;
+
+        hr {
+            display: none;
+        }
+    }
+
+    @include respond-to(desktop) {
+
+        display: flex;
+        justify-content: space-between;
+        padding: 51.2px;
+
+        hr {
+            display: none;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    strong {
+        display: block;
+        margin: 28px 0;
+    }
+
+    .flexBlock {
+
+        @include respond-to(tablet) {
+            width: 48%;
+        }
+
+        @include respond-to(desktop) {
+            width: 48%;
+        }
+
+    }
+}
+
+.aboutMaree {
+    display: relative;
+}

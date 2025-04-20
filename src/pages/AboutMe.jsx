@@ -4,6 +4,7 @@ import wp from '../assets/Whatsapp.svg'
 import tg from '../assets/Telegram.svg'
 import mail from '../assets/Gmail.svg'
 import linked from '../assets/Linkedin.svg'
+import { useNavigate } from 'react-router-dom'
 
 function AboutMe() {
     return (
@@ -188,10 +189,10 @@ function AboutMe() {
                 <strong>Если вам откликается мой подход, давайте создадим что-то классное вместе. </strong>
 
                 <div className='footerButtons'>
-                    <button style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />Отправить E-mail</button>
-                    <button style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />Написать в WhatsApp</button>
-                    <button style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Написать в Telegram</button>
-                    <button style={{ gridArea: 'li' }}><img src={linked} alt="Linkedin" />Написать в Linkedin</button>
+                    <button style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>
+                    <button style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
+                    <button style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>
+                    <button style={{ gridArea: 'li' }}><img src={linked} alt="Linkedin" />Linkedin</button>
                 </div>
 
             </div>
