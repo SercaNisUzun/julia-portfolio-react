@@ -13,6 +13,8 @@ import mobileBlock2 from '../assets/mobileBlock2.webp'
 import block from '../assets/block.webp'
 import block1 from '../assets/block1.webp'
 import { useNavigate } from 'react-router-dom';
+import basket1 from '../assets/basket1.webp'
+import basket2 from '../assets/basket2.webp'
 
 
 function Maree() {
@@ -81,6 +83,25 @@ function Maree() {
                         <li>Внедрила прогресс‑бар и безопасный UX удаления товара.</li>
                         <li>Протестировала выгодные предложения при покупке нескольких позиций.</li>
                     </ul>
+
+                    <div className='blockPic'>
+
+                        <div className='flexBlock'>
+
+                            <img src={basket1} alt="Maree project" />
+
+                        </div>
+
+                        <hr />
+
+                        <div className='flexBlock'>
+
+                            <img src={basket2} alt="Maree project" />
+
+                        </div>
+
+
+                    </div>
 
                     <div className='greenBgText'>
                         <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>количество брошенных корзин снизилось на 17% в первые 2 недели после внедрения.</p>
