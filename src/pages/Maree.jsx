@@ -15,6 +15,8 @@ import block1 from '../assets/block1.webp'
 import { useNavigate } from 'react-router-dom';
 import basket1 from '../assets/basket1.webp'
 import basket2 from '../assets/basket2.webp'
+import videoBanner from '../assets/videoBanner.svg'
+import videoplaceholder from '../assets/videoplaceholder.jpg'
 
 
 function Maree() {
@@ -103,7 +105,7 @@ function Maree() {
 
                     </div>
 
-                    <div className='greenBgText'>
+                    <div className='purpleBgText'>
                         <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>количество брошенных корзин снизилось на 17% в первые 2 недели после внедрения.</p>
                     </div>
                 </div>
@@ -154,7 +156,7 @@ function Maree() {
 
                     </div>
 
-                    <div className='greenBgText'>
+                    <div className='purpleBgText'>
                         <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>пользователи стали чаще покупать 2-3 товара, за счет очевидной выгоды — а мы увеличили средний чек и уменьшили кол-во чарджбеков.</p>
                     </div>
                 </div>
@@ -178,7 +180,7 @@ function Maree() {
                         <li>Добавила новый байблок, о котором говорила выше</li>
                     </ul>
 
-                    <div className='greenBgText'>
+                    <div className='purpleBgText'>
                         <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>+12 % конверсия PDP, больше времени на странице, чаще кликают «Добавить в корзину».</p>
                     </div>
                 </div>
@@ -186,7 +188,41 @@ function Maree() {
                 <hr />
 
                 <div>
-                    <h2>Решение 4: Прелендинги</h2>
+                    <h2>Решение 4: Страница “Build your bundle”</h2>
+                    <p><strong>Проблема</strong>- пользователи редко добавляли несколько продуктов, тк не было качественного аппсейла. Не хватало удобного способа показать, как продукты можно сочетать между собой для комплексного решения задач. Это ограничивало рост среднего чека. </p>
+
+                    <p>Мы разработали и внедрили функцию Build Your Bundle — конструктор, где покупатель может легко подобрать продукты под свои потребности, а за сбор бандла получает скидку.</p>
+
+                    <strong>Что сделала</strong>
+                    <ul>
+                        <li>Разработала структуру страницы и логику добавления продуктов в бандл</li>
+                        <li>Сделала визуальное оформление и проработала UX для удобного выбора</li>
+                        <li>Разработала блок с визуальным интерактивным конструктором: добавление товаров и отображение скидки в реальном времени</li>
+                        <li>Продумала UX/UI: простая и понятная механика добавление товаров в бандл через сетку карточек</li>
+                    </ul>
+
+                    <div className='videoArea'>
+                        <div className='videoBanner'>
+                            <img src={videoBanner} alt="" />
+                        </div>
+
+                        <div className='video'>
+
+                            <img src={videoplaceholder} alt="" />
+
+                        </div>
+
+                    </div>
+
+                    <div className='purpleBgText'>
+                        <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>+12 % конверсия PDP, больше времени на странице, чаще кликают «Добавить в корзину».</p>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div>
+                    <h2>Решение 5: Прелендинги</h2>
                     <p><strong>Проблема</strong>- рекламный трафик сливался; прелендинг не усиливал сообщение и не помогали принять решение.</p>
 
                     <strong>Что сделала</strong>
@@ -196,7 +232,20 @@ function Maree() {
                         <li>Самыми успешными оказались сторителлинговые прелендинги, которые прогревали через боль → решение → эмоцию.</li>
                     </ul>
 
-                    <div className='greenBgText'>
+                    <div className='videoArea'>
+                        <div className='videoBanner'>
+                            <img src={videoBanner} alt="" />
+                        </div>
+
+                        <div className='video'>
+
+                            <img src={videoplaceholder} alt="" />
+
+                        </div>
+
+                    </div>
+
+                    <div className='purpleBgText'>
                         <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>рост CTR и ROAS, особенно на холодном трафике (NC ROAS).</p>
                     </div>
                 </div>
@@ -213,7 +262,7 @@ function Maree() {
                         <li>Мотивация к покупке в корзине</li>
                     </ul>
 
-                    <div className='greenBgText'>
+                    <div className='purpleBgText'>
 
                         <h2>Итог</h2>
                         <ul>
