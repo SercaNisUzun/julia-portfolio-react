@@ -1,0 +1,38 @@
+@import 'mixins', 'variables';
+
+
+.others {
+    font-family: Ubuntu;
+    line-height: 150%;
+}
+
+.otherBanner {
+
+    .bannerImg {
+        height: 288px;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+
+}
+
+.tabs {
+
+    display: flex;
+    justify-content: space-between;
+
+
+    button {
+        width: 25%;
+        border: none;
+        border-bottom: 2px solid black;
+        font-family: Ubuntu;
+        font-size: 16px;
+        background-color: $bgColor ;
+        padding-bottom: 13px;
+    }
+}

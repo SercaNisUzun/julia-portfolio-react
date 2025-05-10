@@ -1,0 +1,12 @@
+@import 'mixins', 'variables';
+
+.sliderContainer {
+    height: 500px;
+    display: flex;
+    overflow: scroll;
+    margin-left: 16px;
+
+    img {
+        margin-right: 24px;
+    }
+}
