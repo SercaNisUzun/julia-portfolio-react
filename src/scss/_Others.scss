@@ -4,12 +4,16 @@
 .others {
     font-family: Ubuntu;
     line-height: 150%;
+
+    .contact {
+        margin-top: 3.125rem;
+    }
 }
 
 .otherBanner {
 
     .bannerImg {
-        height: 288px;
+        height: 350px;
 
         img {
             height: 100%;
@@ -35,4 +39,9 @@
         background-color: $bgColor ;
         padding-bottom: 13px;
     }
+}
+
+.othersContent {
+    padding: 0 .8875rem;
+    margin-top: 1.5rem;
 }
