@@ -8,12 +8,50 @@
     .contact {
         margin-top: 3.125rem;
     }
+
+    .aboutText {
+
+        @include respond-to(tablet) {
+            position: static;
+            width: auto;
+            padding: 0 2.75rem;
+            margin: 2rem 0;
+        }
+
+
+        @include respond-to(desktop) {
+            position: static;
+            width: auto;
+            padding: 0 2.75rem;
+            margin: 2rem 0;
+        }
+
+        @include respond-to(large-desktop) {
+            position: static;
+            width: auto;
+            padding: 0 7.5rem;
+            margin: 2rem 0;
+        }
+
+    }
 }
 
 .otherBanner {
 
     .bannerImg {
         height: 350px;
+
+        @include respond-to(tablet) {
+            height: 500px;
+        }
+
+        @include respond-to(desktop) {
+            height: 640px;
+        }
+
+        @include respond-to(large-desktop) {
+            height: 900px;
+        }
 
         img {
             height: 100%;
@@ -44,4 +82,63 @@
 .othersContent {
     padding: 0 .8875rem;
     margin-top: 1.5rem;
+
+    @include respond-to(tablet) {
+        padding: 0 2.75rem;
+    }
+
+    @include respond-to(desktop) {
+        padding: 0 2.75rem;
+    }
+
+    @include respond-to(large-desktop) {
+        padding: 0 7.5rem;
+    }
+}
+
+#bigScreenBanner {
+
+    @include respond-to(large-desktop) {
+        width: 30%;
+        position: absolute;
+        top: 400px;
+        left: 40px;
+        line-height: normal;
+        padding: 0;
+    }
+
+}
+
+.otherBrands {
+
+
+    .brandSliderArea {
+
+        padding: 0px 10px 10px 10px;
+        @include greenBg;
+
+        img {
+            width: 100%;
+        }
+
+        .sliderContainer {
+            margin: 0;
+
+
+            img {
+                margin: 0;
+                object-fit: contain;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+.appSliderHeight {
+
+    .sliderContainer {
+        height: 31.25rem;
+    }
+
 }

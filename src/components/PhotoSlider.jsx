@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { importAll } from '../utils/importImages';
+import { RiArrowLeftFill, RiArrowRightFill } from "react-icons/ri";
 
 const PhotoSlider = ({ group }) => {
     const [images, setImages] = useState([]);
@@ -41,13 +42,6 @@ const PhotoSlider = ({ group }) => {
 
     return (
         <div className="photo-slider">
-            <button
-                onClick={() => scrollGallery('left')}
-                disabled={atStart}
-                className={`scroll-btn left ${atStart ? 'disabled' : ''}`}
-            >
-                ←
-            </button>
 
             <div
                 className="sliderContainer"
@@ -64,13 +58,27 @@ const PhotoSlider = ({ group }) => {
                 ))}
             </div>
 
-            <button
-                onClick={() => scrollGallery('right')}
-                disabled={atEnd}
-                className={`scroll-btn right ${atEnd ? 'disabled' : ''}`}
-            >
-                →
-            </button>
+            <div className='sliderButtons'>
+
+                <button
+                    onClick={() => scrollGallery('left')}
+                    disabled={atStart}
+                    className={`scroll-btn left ${atStart ? 'disabled' : ''}`}
+                >
+                    <RiArrowLeftFill />
+                </button>
+
+                <button
+                    onClick={() => scrollGallery('right')}
+                    disabled={atEnd}
+                    className={`scroll-btn right ${atEnd ? 'disabled' : ''}`}
+                >
+                    <RiArrowRightFill />
+                </button>
+
+            </div>
+
+
         </div>
     );
 };

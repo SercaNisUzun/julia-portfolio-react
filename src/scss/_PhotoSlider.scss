@@ -1,39 +1,29 @@
 .photo-slider {
-    position: relative;
 
     .sliderContainer {
-        height: 500px;
         display: flex;
         overflow: scroll;
-        margin: 32px 16px 32px 0;
+        margin: 32px 0;
         scroll-behavior: smooth;
 
         img {
             margin-right: 24px;
             height: 100%;
-            border-radius: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
     }
 
     .scroll-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1;
-        background-color: rgba(255, 255, 255, 0.9);
-        border: none;
-        font-size: 2rem;
-        padding: 0.5rem 1rem;
+
+        border: 2px solid black;
+        font-size: 1.5rem;
+        padding: 0.5rem;
         cursor: pointer;
         transition: opacity 0.3s;
+        width: 3rem;
+        @include greenBg;
 
-        &.left {
-            left: 8px;
-        }
-
-        &.right {
-            right: 8px;
+        &:nth-child(1) {
+            margin-right: 2rem;
         }
 
         &.disabled {
@@ -42,4 +32,31 @@
             pointer-events: none;
         }
     }
+}
+
+.sliderButtons {
+
+    display: none;
+
+    @include respond-to(tablet) {
+        display: flex;
+        justify-content: end;
+        height: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    @include respond-to(desktop) {
+        display: flex;
+        justify-content: end;
+        height: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    @include respond-to(large-desktop) {
+        display: flex;
+        justify-content: end;
+        height: 3rem;
+        margin-bottom: 2rem;
+    }
+
 }

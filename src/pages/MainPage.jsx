@@ -10,6 +10,25 @@ function MainPage() {
 
     const navigate = useNavigate();
 
+    const skills = [
+        'UX Research',
+        'A/B Testing',
+        'UI/UX Design',
+        'Usability',
+        'Competitive Analysis',
+        'eCommerce',
+        'EdTech',
+        'Design Systems',
+        'User Personas',
+        'User Stories',
+        'Metrics',
+        'Roadmaps',
+        'Patterns',
+        'IOS/Android',
+        'Cross-Teams',
+        'Interaction Design',
+    ];
+
     return (
 
         <div>
@@ -36,7 +55,7 @@ function MainPage() {
             </div>
 
 
-            <Slider />
+            <Slider items={skills} />
 
             <div className='projectLinks'>
 
@@ -92,7 +111,7 @@ function MainPage() {
 
                     </div>
 
-                    <div className='projectCard'>
+                    <div onClick={() => navigate("/others")} className='projectCard'>
                         <img src={maree} alt="" />
 
                         <div className='cardTitle'>

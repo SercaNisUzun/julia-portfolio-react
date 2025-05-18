@@ -46,7 +46,7 @@
     font-weight: 500;
     color: #00412D;
     display: grid;
-    grid-template-rows: repeat(2, 52px);
+    grid-template-rows: repeat(2, 56px);
     grid-template-columns: repeat(6, );
     grid-template-areas:
         'm m m wp wp wp'
@@ -66,7 +66,9 @@
         font-family: Ubuntu;
         color: #00412D;
         font-weight: 500;
-        padding: 20px 10px
+        padding: 20px 10px;
+        min-width: 170px;
+        height: 3.5rem;
     }
 
 }
