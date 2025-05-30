@@ -9,6 +9,7 @@ import mail from '../assets/Gmail.svg'
 import linked from '../assets/Linkedin.svg'
 import OtherApps from '../components/otherApps'
 import OtherBrands from '../components/OtherBrands'
+import OtherWeb from '../components/OtherWeb'
 
 
 function Others() {
@@ -20,7 +21,7 @@ function Others() {
             case 'tab1':
                 return <OtherApps />;
             case 'tab2':
-                return <OtherApps />;
+                return <OtherWeb />;
             case 'tab3':
                 return <OtherBrands />;
             default:
@@ -59,11 +60,27 @@ function Others() {
                     </button>
                 </div>
 
-                <div className='tabs'>
-                    <button onClick={() => changeTab('tab1')}>Приложения</button>
-                    <button onClick={() => changeTab('tab2')}>Вебсайты</button>
-                    <button onClick={() => changeTab('tab3')}>Брендинг</button>
+                <div className="tabs">
+                    <button
+                        onClick={() => changeTab('tab1')}
+                        className={tab === 'tab1' ? 'active' : ''}
+                    >
+                        Приложения
+                    </button>
+                    <button
+                        onClick={() => changeTab('tab2')}
+                        className={tab === 'tab2' ? 'active' : ''}
+                    >
+                        Вебсайты
+                    </button>
+                    <button
+                        onClick={() => changeTab('tab3')}
+                        className={tab === 'tab3' ? 'active' : ''}
+                    >
+                        Брендинг
+                    </button>
                 </div>
+
 
             </div>
 

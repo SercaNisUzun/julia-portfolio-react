@@ -1,7 +1,10 @@
 import React from 'react'
-import MainPhoto1 from '../assets/MainPhoto1.jpg'
+import MainPhoto1 from '../assets/MainPhoto1.webp'
 import Slider from '../components/Slider'
-import maree from '../assets/placeholder.jpg'
+import maree from '../assets/mainCardMaree.webp'
+import miin from '../assets/mainCardMiin.webp'
+import others from '../assets/mainCardOthers.webp'
+import asto from '../assets/mainCardAsto.webp'
 import { RiArrowRightFill } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 
@@ -80,7 +83,7 @@ function MainPage() {
                     </div>
 
                     <div className='projectCard'>
-                        <img src={maree} alt="" />
+                        <img src={asto} alt="" />
 
                         <div className='cardTitle'>
                             <h3>Astuvet</h3>
@@ -96,7 +99,7 @@ function MainPage() {
                     </div>
 
                     <div className='projectCard'>
-                        <img src={maree} alt="" />
+                        <img src={miin} alt="" />
 
                         <div className='cardTitle'>
                             <h3>НутриКампус (MIIN)</h3>
@@ -112,7 +115,7 @@ function MainPage() {
                     </div>
 
                     <div onClick={() => navigate("/others")} className='projectCard'>
-                        <img src={maree} alt="" />
+                        <img src={others} alt="" />
 
                         <div className='cardTitle'>
                             <h3>Другие проекты</h3>

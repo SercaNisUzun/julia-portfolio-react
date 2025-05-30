@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import wand from '../assets/MagicWand.svg';
 
 function Slider({ items = [] }) {
+    const [repeatedItems, setRepeatedItems] = useState([]);
+
+    useEffect(() => {
+        const screenWidth = window.innerWidth;
+        const estimatedItemWidth = 150; // ortalama item genişliği (metin + icon)
+        const repeatCount = Math.ceil((screenWidth * 2) / (items.length * estimatedItemWidth));
+
+        const fullList = Array(repeatCount).fill(items).flat();
+        setRepeatedItems(fullList);
+    }, [items]);
+
     return (
         <div className='slider-wrap'>
             <div className='slider'>
-                {items.concat(items).map((item, index) => (
+                {repeatedItems.map((item, index) => (
                     <React.Fragment key={index}>
-                        <span aria-hidden={index >= items.length}>{item}</span>
-                        <img
-                            src={wand}
-                            alt=""
-                            aria-hidden={index >= items.length}
-                        />
+                        <span>{item}</span>
+                        <img src={wand} alt="" />
                     </React.Fragment>
                 ))}
             </div>

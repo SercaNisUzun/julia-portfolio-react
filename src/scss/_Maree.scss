@@ -151,6 +151,7 @@
 
         display: flex;
         justify-content: space-between;
+        padding: 10px 16px 10px 16px;
 
         hr {
             display: none;
@@ -161,7 +162,7 @@
 
         display: flex;
         justify-content: space-between;
-        padding: 51.2px;
+        padding: 10px 16px 10px 16px;
 
         hr {
             display: none;
@@ -172,7 +173,7 @@
 
         display: flex;
         justify-content: space-between;
-        padding: 51.2px;
+        padding: 10px 16px 10px 16px;
 
         hr {
             display: none;
@@ -212,7 +213,6 @@
 .videoArea {
     @include greenBg;
     padding: 10px 25px 25px 25px;
-    border-radius: 9px;
     margin: 32px 0;
 
     .videoBanner {

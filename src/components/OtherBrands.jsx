@@ -3,6 +3,7 @@ import Slider from './Slider'
 import PhotoSlider from './photoSlider'
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import brandSliderBanner from "../assets/brandSliderBanner.png"
+import SinglePhotoSlider from './SinglePhotoSlider';
 
 const sliderData1 = [
     "Welcome Book", "New-Hire Journey", "Onboarding", "Company Culture",
@@ -43,9 +44,9 @@ function OtherBrands() {
                     </p>
                 </div>
 
-                <div className='brandSliderArea'>
+                <div className='singlePhotoSlider'>
                     <img src={brandSliderBanner} alt="" />
-                    <PhotoSlider group="othersBrandSlider1" />
+                    <SinglePhotoSlider group="othersBrandSlider1" />
                 </div>
 
                 <hr />
@@ -66,9 +67,9 @@ function OtherBrands() {
                     </p>
                 </div>
 
-                <div className='brandSliderArea'>
+                <div className='singlePhotoSlider'>
                     <img src={brandSliderBanner} alt="" />
-                    <PhotoSlider group="othersBrandSlider2" />
+                    <SinglePhotoSlider group="othersBrandSlider2" />
                 </div>
 
                 <hr />
@@ -89,8 +90,8 @@ function OtherBrands() {
                     </p>
                 </div>
 
-                <div>
-                    <PhotoSlider className="sliderMargin" group="othersAppSlider1" />
+                <div id='brandRegularSlide'>
+                    <PhotoSlider className="sliderMargin" group="othersBrandSlider3" />
                 </div>
 
                 <hr />
@@ -111,9 +112,9 @@ function OtherBrands() {
                     </p>
                 </div>
 
-                <div className='brandSliderArea'>
+                <div className='singlePhotoSlider'>
                     <img src={brandSliderBanner} alt="" />
-                    <PhotoSlider group="othersBrandSlider4" />
+                    <SinglePhotoSlider group="othersBrandSlider4" />
                 </div>
 
             </div>

@@ -3,7 +3,7 @@
     .sliderContainer {
         display: flex;
         overflow: scroll;
-        margin: 32px 0;
+        margin: 32px 0 10px 0;
         scroll-behavior: smooth;
 
         img {
@@ -14,16 +14,41 @@
 
     .scroll-btn {
 
-        border: 2px solid black;
-        font-size: 1.5rem;
+        position: relative;
+        border: 1px solid black;
+        font-size: 1rem;
         padding: 0.5rem;
         cursor: pointer;
         transition: opacity 0.3s;
         width: 3rem;
         @include greenBg;
+        height: 1.5rem;
+        width: 1.5rem;
+
+        @include respond-to(tablet) {
+            height: 1.7rem;
+            width: 1.7rem;
+        }
+
+        @include respond-to(desktop) {
+            height: 2rem;
+            width: 2rem;
+        }
+
+        @include respond-to(large-desktop) {
+            height: 2rem;
+            width: 2rem;
+        }
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
         &:nth-child(1) {
-            margin-right: 2rem;
+            margin-right: .625rem;
         }
 
         &.disabled {

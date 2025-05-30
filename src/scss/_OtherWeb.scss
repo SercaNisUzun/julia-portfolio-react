@@ -1,0 +1,97 @@
+.otherWeb {
+    .singlePhotoSlider {
+        height: 230px;
+        position: relative;
+        @include greenBg;
+        padding-bottom: 10px;
+        margin-bottom: 50px;
+        padding: 0 7px;
+
+        @include respond-to(tablet) {
+            height: 400px;
+            padding: 0 10px;
+        }
+
+        @include respond-to(desktop) {
+            height: 500px;
+            padding: 0 15px;
+        }
+
+        @include respond-to(large-desktop) {
+            height: 600px;
+            padding: 0 15px;
+        }
+
+        &>img {
+            height: .5313rem;
+
+            @include respond-to(tablet) {
+                height: 10px;
+            }
+
+            @include respond-to(desktop) {
+                height: 12px;
+            }
+
+            @include respond-to(large-desktop) {
+                height: 16px;
+                margin: 10px 0 5px 0;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .single-photo-slider {
+            height: 85%;
+            overflow: scroll;
+            width: 100%;
+            margin: auto;
+
+            @include respond-to(tablet) {
+                height: 90%;
+            }
+
+            @include respond-to(desktop) {
+                height: 92%;
+            }
+
+            @include respond-to(large-desktop) {
+                height: 90%;
+            }
+
+        }
+
+        .controls {
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+
+            @include respond-to(tablet) {
+                bottom: -35px;
+            }
+
+            @include respond-to(desktop) {
+                bottom: -40px;
+            }
+
+            @include respond-to(large-desktop) {
+                bottom: -40px;
+            }
+
+        }
+    }
+
+    .photo-slider {
+        height: 500px;
+        overflow: scroll;
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+
+}

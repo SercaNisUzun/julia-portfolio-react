@@ -38,6 +38,9 @@
             font-family: Ubuntu;
             font-weight: 500;
             margin: 25.6px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             @include respond-to(tablet) {
                 height: 70px;
@@ -63,11 +66,13 @@
         p {
             text-align: center;
             margin: 0 24px;
-            width: 55%;
+            width: 60%;
             margin: auto;
         }
 
         .adaptiveBorder {
+
+
             @include respond-to(tablet) {
                 border-right: 1px #00412D solid;
             }
@@ -138,6 +143,10 @@
     color: #00412D;
     font-weight: 400;
 
+    @include respond-to(tablet) {
+        margin: 32px 56px;
+    }
+
     @include respond-to(desktop) {
         margin: 32px 70px;
     }
@@ -157,9 +166,13 @@
 
     .aboutMe {
 
+        p {
+            margin: 0;
+        }
+
         @include respond-to(tablet) {
 
-            margin: 52.2px 129.6px;
+            margin: 52.2px 50px;
 
             hr {
                 display: none;
@@ -168,7 +181,7 @@
 
         @include respond-to(desktop) {
 
-            margin: 64px 250px;
+            margin: 64px 70px;
 
             hr {
                 display: none;
@@ -188,7 +201,7 @@
     .aboutMe2 {
         @include respond-to(desktop) {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
 
             h2 {
                 width: 50%;
@@ -201,14 +214,14 @@
 
         @include respond-to(large-desktop) {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
 
             h2 {
                 width: 50%;
             }
 
             p {
-                width: 40%;
+                width: 43%;
             }
         }
     }
@@ -304,11 +317,12 @@ hr {
 
     @include respond-to(tablet) {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         align-items: baseline;
 
         .company {
-            width: 30%;
+            width: 40%;
         }
 
         .content {
@@ -320,6 +334,7 @@ hr {
 
     @include respond-to(desktop) {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         align-items: baseline;
         width: 40%;
@@ -337,6 +352,7 @@ hr {
 
     @include respond-to(large-desktop) {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         align-items: baseline;
         width: 43%;
@@ -399,7 +415,7 @@ hr {
 
     @include respond-to(desktop) {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
 
         h2 {
             width: 55%;
@@ -412,7 +428,7 @@ hr {
 
     @include respond-to(large-desktop) {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
 
         h2 {
             width: 55%;
@@ -422,4 +438,45 @@ hr {
             width: 40%;
         }
     }
+}
+
+.aboutMeSlider {
+
+    .photo-slider img {
+        animation: scrolling 10s linear infinite;
+
+        @keyframes scrolling {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+    }
+
+}
+
+.aboutMePage {
+    .infinite-slider-track {
+
+        @include respond-to(tablet) {
+            height: 350px;
+            margin: 20px 0;
+        }
+
+        @include respond-to(desktop) {
+            height: 400px;
+            margin: 40px 0;
+        }
+
+        @include respond-to(large-desktop) {
+            height: 500px;
+            margin: 60px 0;
+        }
+    }
+
+
 }

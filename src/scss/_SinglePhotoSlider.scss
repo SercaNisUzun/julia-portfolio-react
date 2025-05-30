@@ -1,0 +1,52 @@
+.controls button.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.controls {
+
+    display: flex;
+    justify-content: end;
+
+    button:nth-child(1) {
+        margin-right: .625rem;
+    }
+
+    button {
+        position: relative;
+        border: 1px solid black;
+        font-size: 1rem;
+        padding: 0.5rem;
+        cursor: pointer;
+        transition: opacity 0.3s;
+        @include greenBg;
+        height: 1.5rem;
+        width: 1.5rem;
+
+        @include respond-to(tablet) {
+            height: 1.7rem;
+            width: 1.7rem;
+        }
+
+        @include respond-to(desktop) {
+            height: 2rem;
+            width: 2rem;
+        }
+
+        @include respond-to(large-desktop) {
+            height: 2rem;
+            width: 2rem;
+        }
+
+
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}

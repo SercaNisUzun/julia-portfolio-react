@@ -5,10 +5,13 @@ import tg from '../assets/Telegram.svg'
 import mail from '../assets/Gmail.svg'
 import linked from '../assets/Linkedin.svg'
 import { useNavigate } from 'react-router-dom'
+import PhotoSliderInfinite from '../components/PhotoSliderInfinite'
+
 
 function AboutMe() {
+
     return (
-        <div>
+        <div className='aboutMePage'>
 
             <div className='imgConteiner'>
                 <img src={aboutme} alt="" />
@@ -122,9 +125,7 @@ function AboutMe() {
                     </div>
 
 
-                    <div className='imgConteiner'>
-                        <img src={aboutme} alt="" />
-                    </div>
+                    <PhotoSliderInfinite group="aboutMeSlider" />
 
                 </div>
 

@@ -40,7 +40,7 @@
 }
 
 .mainPhoto {
-    height: 300px;
+    height: 350px;
 
     @include respond-to(tablet) {
         height: 100%;
@@ -106,7 +106,8 @@
         }
 
         img {
-            width: 100%;
+
+            object-fit: cover;
         }
 
         .cardInfo {
@@ -155,7 +156,7 @@
 .mainDiv {
     @include respond-to(tablet) {
         display: flex;
-        height: 416px;
+        height: 375px;
         position: relative;
 
         .mainPhoto {
@@ -163,7 +164,7 @@
             width: 50%;
 
             img {
-                max-height: 200%;
+                max-height: 100%;
                 max-width: 100%;
             }
         }
@@ -187,7 +188,7 @@
 
     @include respond-to(desktop) {
         display: flex;
-        height: 416px;
+        height: 440px;
         position: relative;
 
         .mainPhoto {
@@ -195,7 +196,7 @@
             width: 50%;
 
             img {
-                max-height: 200%;
+                max-height: 100%;
                 max-width: 100%;
             }
         }
@@ -218,7 +219,7 @@
 
     @include respond-to(large-desktop) {
         display: flex;
-        height: 416px;
+        height: 550px;
         position: relative;
 
         .mainPhoto {
@@ -226,7 +227,7 @@
             width: 50%;
 
             img {
-                max-height: 200%;
+                max-height: 100%;
                 max-width: 100%;
             }
         }
@@ -244,8 +245,12 @@
 
         }
 
-
     }
+
+    @media screen and (min-width: 1600px) {
+        height: 650px;
+    }
+
 }
 
 .projectCards {
@@ -253,7 +258,7 @@
         margin: 0 22.4px 38.4px 22.4px;
         display: flex;
         flex-wrap: wrap;
-        gap: 19.2px;
+        gap: 22px;
         justify-content: space-around;
     }
 
@@ -261,7 +266,7 @@
         margin: 0 22.4px 38.4px 22.4px;
         display: flex;
         flex-wrap: wrap;
-        gap: 19.2px;
+        gap: 24px;
         justify-content: space-around;
     }
 
@@ -269,7 +274,7 @@
         margin: 0 22.4px 38.4px 22.4px;
         display: flex;
         flex-wrap: wrap;
-        gap: 19.2px;
+        gap: 30px;
         justify-content: space-around;
     }
 }

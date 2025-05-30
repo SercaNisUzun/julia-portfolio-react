@@ -1,0 +1,27 @@
+.infinite-slider-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.infinite-slider-track {
+    height: 15.125rem;
+    display: flex;
+    width: max-content;
+    animation: scroll-left 70s linear infinite;
+
+    img {
+        margin-right: 13px;
+        flex-shrink: 0;
+        object-fit: contain;
+    }
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}

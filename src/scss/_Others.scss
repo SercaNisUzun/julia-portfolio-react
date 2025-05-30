@@ -71,11 +71,23 @@
     button {
         width: 25%;
         border: none;
-        border-bottom: 2px solid black;
         font-family: Ubuntu;
         font-size: 16px;
         background-color: $bgColor ;
         padding-bottom: 13px;
+
+        color: #C0D1AD;
+
+        &:hover {
+            font-weight: 600;
+            border-bottom: 2px solid #C0D1AD;
+        }
+
+        &.active {
+            color: black;
+            font-weight: 600;
+            border-bottom: 2px solid black;
+        }
     }
 }
 
@@ -111,11 +123,37 @@
 
 .otherBrands {
 
+    .photo-slider {
 
-    .brandSliderArea {
+
+        .sliderButtons {
+            display: flex;
+            justify-content: end;
+        }
+    }
+
+
+    .singlePhotoSlider {
 
         padding: 0px 10px 10px 10px;
         @include greenBg;
+
+        &>img {
+            height: .5313rem;
+
+            @include respond-to(tablet) {
+                height: 10px;
+            }
+
+            @include respond-to(desktop) {
+                height: 12px;
+            }
+
+            @include respond-to(large-desktop) {
+                height: 16px;
+                margin: 10px 0 5px 0;
+            }
+        }
 
         img {
             width: 100%;
@@ -124,7 +162,6 @@
         .sliderContainer {
             margin: 0;
 
-
             img {
                 margin: 0;
                 object-fit: contain;
@@ -132,6 +169,23 @@
                 height: auto;
             }
         }
+
+        .sliderButtons {
+            margin: .625rem;
+        }
+
+        @media screen and (max-width: 767px) {
+            .scroll-btn {
+                height: 1.875rem;
+                font-size: 1rem;
+                width: 1.875rem;
+            }
+
+            .photo-slider .scroll-btn:nth-child(1) {
+                margin-right: 1rem;
+            }
+        }
+
     }
 }
 
@@ -139,6 +193,34 @@
 
     .sliderContainer {
         height: 31.25rem;
+    }
+
+}
+
+#brandRegularSlide {
+
+    & .sliderContainer {
+        height: 21rem;
+
+
+        @include respond-to(tablet) {
+            height: 400px;
+        }
+
+        @include respond-to(desktop) {
+            height: 500px;
+        }
+
+        @include respond-to(large-desktop) {
+            height: 600px;
+        }
+
+        img {
+            padding: 9.95px;
+            @include greenBg;
+            margin-right: 16px;
+            height: auto;
+        }
     }
 
 }
