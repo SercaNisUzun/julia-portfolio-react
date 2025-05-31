@@ -45,7 +45,7 @@ function MainPage() {
                 <div className='greenBg'>
                     <div className='mainText'>
                         <h1>Привет, я Юлия — продуктовый дизайнер</h1>
-                        <h2>Более 5 лет коммерческого опыта в eCommerce-проектах, мобильных приложениях, веб-платформах и EdTech. Разрабатываю решения, которые повышают конверсию  и увеличивают продажи.</h2>
+                        <h2>Более 5 лет коммерческого опыта в eCommerce-проектах, мобильных приложениях, веб-платформах и EdTech. Создаю решения, которые повышают конверсию  и увеличивают продажи.</h2>
 
                         <div className='mainButton'>
                             <button>Скачать CV</button>
@@ -82,6 +82,22 @@ function MainPage() {
 
                     </div>
 
+                    <div onClick={() => navigate("/others")} className='projectCard'>
+                        <img src={others} alt="" />
+
+                        <div className='cardTitle'>
+                            <h3>Другие проекты</h3>
+                            <p>(Web/App/Brand)</p>
+                        </div>
+
+                        <p className='cardInfo'>Менее масштабные, но не менее важные этапы моего пути — это возможность показать вам больше о моих навыках и стиле работы. Вы сможете лучше понять, насколько совпадают наши вайбы, видение прекрасного и подходы к решению пользовательских задач.</p>
+
+                        <div className='cardClick'>
+                            <p >Изучить кейс <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
+                        </div>
+
+                    </div>
+
                     <div className='projectCard'>
                         <img src={asto} alt="" />
 
@@ -93,7 +109,7 @@ function MainPage() {
                         <p className='cardInfo'>В компании Astuvet я создала MVP приложения MyVetCoach, успешно презентованного инвесторам на коференции в США, а так же разработала стратегию монетизации для платформы.</p>
 
                         <div className='cardClick'>
-                            <p >Изучить кейс <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
+                            <p >Coming soon <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
                         </div>
 
                     </div>
@@ -109,23 +125,7 @@ function MainPage() {
                         <p className='cardInfo'>В проекте НутриКампус я занималась редизайном интерфейса, что позволило увеличить конверсию на 25%. Также внедрила фичи для монетизации через продажу вебинаров и курсов.</p>
 
                         <div className='cardClick'>
-                            <p >Изучить кейс <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
-                        </div>
-
-                    </div>
-
-                    <div onClick={() => navigate("/others")} className='projectCard'>
-                        <img src={others} alt="" />
-
-                        <div className='cardTitle'>
-                            <h3>Другие проекты</h3>
-                            <p>(Web/App/Brand)</p>
-                        </div>
-
-                        <p className='cardInfo'>Менее масштабные, но не менее важные этапы моего пути — это возможность показать вам больше о моих навыках и стиле работы. Вы сможете лучше понять, насколько совпадают наши вайбы, видение прекрасного и подходы к решению пользовательских задач.</p>
-
-                        <div className='cardClick'>
-                            <p >Изучить кейс <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
+                            <p >Coming soon <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
                         </div>
 
                     </div>

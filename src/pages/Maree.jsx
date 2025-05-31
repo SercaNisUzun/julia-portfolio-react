@@ -13,10 +13,11 @@ import mobileBlock2 from '../assets/mobileBlock2.webp'
 import block from '../assets/block.webp'
 import block1 from '../assets/block1.webp'
 import { useNavigate } from 'react-router-dom';
-import basket1 from '../assets/basket1.webp'
-import basket2 from '../assets/basket2.webp'
-import videoBanner from '../assets/videoBanner.svg'
-import videoplaceholder from '../assets/videoplaceholder.jpg'
+import basket1 from '../assets/mareeBasket1.webp'
+import basket2 from '../assets/mareeBasket2.webp'
+import mareeBanner from '../assets/webMareeBanner.webp'
+import SinglePhotoSlider from '../components/SinglePhotoSlider';
+import video from '../assets/mareeVideo.mp4'
 
 
 function Maree() {
@@ -86,23 +87,22 @@ function Maree() {
                         <li>Протестировала выгодные предложения при покупке нескольких позиций.</li>
                     </ul>
 
-                    <div className='blockPic'>
+                    <div className='otherWeb'>
+                        <div id='mareeContainer' className='singlePhotoSlider'>
 
-                        <div className='flexBlock'>
-
-                            <img src={basket1} alt="Maree project" />
-
-                        </div>
-
-                        <hr />
-
-                        <div className='flexBlock'>
-
-                            <img src={basket2} alt="Maree project" />
+                            <img src={mareeBanner} alt="" />
+                            <img id='mareePhoto' src={basket1} alt="" />
 
                         </div>
+                    </div>
 
+                    <div className='otherWeb'>
+                        <div id='mareeContainer' className='singlePhotoSlider'>
 
+                            <img src={mareeBanner} alt="" />
+                            <img id='mareePhoto' src={basket2} alt="" />
+
+                        </div>
                     </div>
 
                     <div className='purpleBgText'>
@@ -176,7 +176,7 @@ function Maree() {
                     <strong>Что сделала</strong>
                     <ul>
                         <li>Продумала сильный продающий листинг, в котором каждое фото показывало ценность продукта: эффект, ощущения, результат, формат применения, чистые эко-френдли составы</li>
-                        <li>Добавила видео‑отзывы UGC — он отлично сработал как сошиал прув, усиливая доверие и подтверждая эффект продукта в реальном использовании</li>
+                        <li>Добавила видео‑отзывы UGC — он отлично сработал как social prove, усиливая доверие и подтверждая эффект продукта в реальном использовании</li>
                         <li>Добавила новый байблок, о котором говорила выше</li>
                     </ul>
 
@@ -191,31 +191,34 @@ function Maree() {
                     <h2>Решение 4: Страница “Build your bundle”</h2>
                     <p><strong>Проблема</strong>- пользователи редко добавляли несколько продуктов, тк не было качественного аппсейла. Не хватало удобного способа показать, как продукты можно сочетать между собой для комплексного решения задач. Это ограничивало рост среднего чека. </p>
 
-                    <p>Мы разработали и внедрили функцию Build Your Bundle — конструктор, где покупатель может легко подобрать продукты под свои потребности, а за сбор бандла получает скидку.</p>
+                    <p>Мы разработали и внедрили функцию Build Your Bundle — конструктор, где покупатель может легко подобрать продукты под свои потребности, а за сбор бандла получает выгодную скидку.</p>
 
                     <strong>Что сделала</strong>
                     <ul>
                         <li>Разработала структуру страницы и логику добавления продуктов в бандл</li>
-                        <li>Сделала визуальное оформление и проработала UX для удобного выбора</li>
+                        <li>Сделала визуальное оформление и проработала UX для удобного выбора товаров</li>
                         <li>Разработала блок с визуальным интерактивным конструктором: добавление товаров и отображение скидки в реальном времени</li>
-                        <li>Продумала UX/UI: простая и понятная механика добавление товаров в бандл через сетку карточек</li>
+                        <li>Продумала UX/UI: простая и понятная механика добавление товаров в бандл через привычный каталог</li>
                     </ul>
 
-                    <div className='videoArea'>
-                        <div className='videoBanner'>
-                            <img src={videoBanner} alt="" />
-                        </div>
+                    <div className='otherWeb'>
+                        <div id='mareeContainer' className='singlePhotoSlider'>
 
-                        <div className='video'>
-
-                            <img src={videoplaceholder} alt="" />
+                            <img src={mareeBanner} alt="" />
+                            <video id='video'
+                                src={video}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                            />
 
                         </div>
 
                     </div>
 
                     <div className='purpleBgText'>
-                        <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>+12 % конверсия PDP, больше времени на странице, чаще кликают «Добавить в корзину».</p>
+                        <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong> за первый месяц среднее количество товаров (3-5 айтемов) в заказе выросло на 25%.</p>
                     </div>
                 </div>
 
@@ -223,27 +226,25 @@ function Maree() {
 
                 <div>
                     <h2>Решение 5: Прелендинги</h2>
-                    <p><strong>Проблема</strong>- рекламный трафик сливался; прелендинг не усиливал сообщение и не помогали принять решение.</p>
+                    <p><strong>Проблема</strong>- рекламный трафик сливался; прелендинги не усиливали сообщение и не помогали принять решение о покупке.</p>
 
                     <strong>Что сделала</strong>
                     <ul>
                         <li>Подошла к прелендингам как к самостоятельному UX-продукту: каждый прелендинг — это мини-воронка, которая прогревает интерес, отвечает на возражения и направляет пользователя к покупке.</li>
-                        <li>Провела серию A/B‑тестов: кастомные заходы под оффер, короткие лендинги «3 аргумента», паттерны доверия (UGC)</li>
+                        <li>Провела серию A/B‑тестов: кастомные заходы под оффер, короткие лендинги «5 причин почему тебе нужен этот продукт», паттерны доверия (UGC)</li>
                         <li>Самыми успешными оказались сторителлинговые прелендинги, которые прогревали через боль → решение → эмоцию.</li>
                     </ul>
 
-                    <div className='videoArea'>
-                        <div className='videoBanner'>
-                            <img src={videoBanner} alt="" />
-                        </div>
+                    <div className='otherWeb'>
+                        <div className='singlePhotoSlider'>
 
-                        <div className='video'>
-
-                            <img src={videoplaceholder} alt="" />
+                            <img src={mareeBanner} alt="" />
+                            <SinglePhotoSlider group='mareePreLands' />
 
                         </div>
 
                     </div>
+
 
                     <div className='purpleBgText'>
                         <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>рост CTR и ROAS, особенно на холодном трафике (NC ROAS).</p>

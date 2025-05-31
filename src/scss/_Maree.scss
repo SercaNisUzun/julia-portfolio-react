@@ -10,6 +10,30 @@
         margin-right: 3px;
     }
 
+    #mareeContainer {
+        height: auto;
+
+        @include respond-to(tablet) {
+            padding: 0 15px 10px 15px;
+        }
+
+        @include respond-to(desktop) {
+            padding: 0 15px 10px 15px;
+        }
+
+        @include respond-to(large-desktop) {
+            padding: 0 15px 10px 15px;
+        }
+
+        #mareePhoto {
+            height: 100%;
+        }
+
+        &:first-child {
+            margin-bottom: 20px;
+        }
+    }
+
 }
 
 .imgMaree {
@@ -151,7 +175,7 @@
 
         display: flex;
         justify-content: space-between;
-        padding: 10px 16px 10px 16px;
+
 
         hr {
             display: none;
@@ -162,7 +186,7 @@
 
         display: flex;
         justify-content: space-between;
-        padding: 10px 16px 10px 16px;
+        padding: 32px;
 
         hr {
             display: none;
@@ -173,7 +197,7 @@
 
         display: flex;
         justify-content: space-between;
-        padding: 10px 16px 10px 16px;
+        padding: 32px;
 
         hr {
             display: none;
@@ -210,21 +234,7 @@
     display: relative;
 }
 
-.videoArea {
-    @include greenBg;
-    padding: 10px 25px 25px 25px;
-    margin: 32px 0;
-
-    .videoBanner {
-        img {
-            width: 100%;
-        }
-    }
-
-    .video {
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
+#video {
+    height: 100%;
+    width: 100%;
 }
