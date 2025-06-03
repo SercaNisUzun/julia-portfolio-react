@@ -3,7 +3,15 @@
 
 .maree {
     font-family: Ubuntu;
-    line-height: 150%;
+
+    h2,
+    strong,
+    p,
+    span,
+    li {
+        line-height: 150%;
+    }
+
 
     strong {
         font-weight: 500;
@@ -69,7 +77,7 @@
     }
 
     @include respond-to(large-desktop) {
-        margin: 96px;
+        margin: 50px 250px;
     }
 
     h2 {
@@ -237,4 +245,25 @@
 #video {
     height: 100%;
     width: 100%;
+}
+
+.imgContainer1 {
+    img {
+        height: 8px;
+
+        @include respond-to(tablet) {
+            height: 17px;
+            margin-top: 5px;
+        }
+
+        @include respond-to(desktop) {
+            height: 20px;
+            margin-top: 5px;
+        }
+
+        @include respond-to(large-desktop) {
+            height: 21px;
+            margin: 10px 0 4px 0;
+        }
+    }
 }

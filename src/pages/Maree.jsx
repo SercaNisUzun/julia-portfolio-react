@@ -89,9 +89,13 @@ function Maree() {
 
                     <div className='otherWeb'>
                         <div id='mareeContainer' className='singlePhotoSlider'>
+                            <div className='imgContainer1'>
+                                <img src={mareeBanner} alt="" />
+                            </div>
 
-                            <img src={mareeBanner} alt="" />
-                            <img id='mareePhoto' src={basket1} alt="" />
+                            <div className='imgContainer2'>
+                                <img id='mareePhoto' src={basket1} alt="" />
+                            </div>
 
                         </div>
                     </div>

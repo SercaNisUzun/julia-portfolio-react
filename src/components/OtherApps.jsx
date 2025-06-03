@@ -171,6 +171,7 @@ function OtherApps() {
                     <PhotoSlider group="othersAppSlider2" />
                 </div>
 
+
                 <div className='purpleBgText'>
                     <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong> +20 % к конверсии в подписку и $10 k выручки за первый месяц после запуска, а так же успешная презентация проекта на вет конференции в ЛА и инвесторам.</p>
                 </div>
@@ -237,6 +238,7 @@ function OtherApps() {
                     </ul>
 
                 </div>
+
 
                 <div>
                     <PhotoSlider group="othersAppSlider7" />

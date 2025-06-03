@@ -29,7 +29,7 @@
         @include respond-to(large-desktop) {
             position: static;
             width: auto;
-            padding: 0 7.5rem;
+            padding: 0 250px;
             margin: 2rem 0;
         }
 
@@ -104,7 +104,7 @@
     }
 
     @include respond-to(large-desktop) {
-        padding: 0 7.5rem;
+        padding: 0 250px;
     }
 }
 
