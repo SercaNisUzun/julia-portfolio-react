@@ -58,7 +58,7 @@ const PhotoSlider = ({ group }) => {
                 ))}
             </div>
 
-            <div className='sliderButtons'>
+            <div className='sliderButtons hoverButton'>
 
                 <button
                     onClick={() => scrollGallery('left')}

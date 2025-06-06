@@ -1,7 +1,7 @@
 import React from 'react'
 import mobileMaree from '../assets/mobileMaree.webp'
 import maree from '../assets/Maree.webp'
-import logoMaree from '../assets/logoMaree.webp'
+import logoMaree from '../assets/logoMaree.svg'
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import wp from '../assets/Whatsapp.svg'
 import tg from '../assets/Telegram.svg'
@@ -42,13 +42,12 @@ function Maree() {
                     <p><strong>Роль:</strong>Product designer</p>
                     <p><strong>Фокус:</strong>Корзина, байблок, продуктовая страница, прелендинги</p>
                     <p><strong>Цель:</strong>Повысить конверсию и улучшить пользовательский опыт</p>
-                    <button>Подробнее о проекте</button>
                 </div>
             </div>
 
             <div className='mareeContent'>
 
-                <div>
+                <div className='hoverButton'>
                     <button onClick={() => navigate("/")} className='greenBack'><IoMdArrowDropleft style={{ fontSize: '50px' }} />Назад
                     </button>
                 </div>
@@ -284,7 +283,7 @@ function Maree() {
                 <p>Я всегда открыта новым проектам и интересным идеям.</p>
                 <strong>Если вам откликается мой подход, давайте создадим что-то классное вместе. </strong>
 
-                <div className='footerButtons'>
+                <div className='footerButtons hoverButton'>
                     <button style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>
                     <button style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
                     <button style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>

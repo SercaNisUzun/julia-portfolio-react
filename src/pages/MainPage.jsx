@@ -47,7 +47,7 @@ function MainPage() {
                         <h1>Привет, я Юлия — продуктовый дизайнер</h1>
                         <h2>Более 5 лет коммерческого опыта в eCommerce-проектах, мобильных приложениях, веб-платформах и EdTech. Создаю решения, которые повышают конверсию  и увеличивают продажи.</h2>
 
-                        <div className='mainButton'>
+                        <div className='mainButton hoverButton'>
                             <button>Скачать CV</button>
                         </div>
 

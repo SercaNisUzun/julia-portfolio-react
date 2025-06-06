@@ -14,7 +14,7 @@ import OtherWeb from '../components/OtherWeb'
 
 function Others() {
 
-    const [tab, changeTab] = useState("app");
+    const [tab, changeTab] = useState("tab1");
 
     const renderTab = () => {
         switch (tab) {
@@ -48,14 +48,13 @@ function Others() {
                 <div className='aboutText' id='bigScreenBanner'>
                     <h2>Маленькие проекты, которые прокачали мои навыки </h2>
                     <p>Презентации, брендбуки, приложения, сайты — собрала здесь проекты, в которых решала конкретные задачи через дизайн.</p>
-                    <button>Посмотреть проекты</button>
                 </div>
 
             </div>
 
             <div className='othersContent'>
 
-                <div>
+                <div className='hoverButton'>
                     <button onClick={() => navigate("/")} className='greenBack'><IoMdArrowDropleft style={{ fontSize: '50px' }} />Назад
                     </button>
                 </div>
@@ -93,7 +92,7 @@ function Others() {
                 <p>Я всегда открыта новым проектам и интересным идеям.</p>
                 <strong>Если вам откликается мой подход, давайте создадим что-то классное вместе. </strong>
 
-                <div className='footerButtons'>
+                <div className='footerButtons hoverButton'>
                     <button style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>
                     <button style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
                     <button style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>

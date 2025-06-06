@@ -189,7 +189,7 @@ function AboutMe() {
                 <p>Я всегда открыта новым проектам и интересным идеям.</p>
                 <strong>Если вам откликается мой подход, давайте создадим что-то классное вместе. </strong>
 
-                <div className='footerButtons'>
+                <div className='footerButtons hoverButton'>
                     <button style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>
                     <button style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
                     <button style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>

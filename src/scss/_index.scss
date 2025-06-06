@@ -4,5 +4,14 @@ body {
     width: 100%;
     margin: auto;
     color: $textColor;
+}
+
+.hoverButton {
+    button:hover {
+        box-shadow: 3px 3px #00412D;
+        background-color: #DACBFF;
+    }
+
+
 
 }

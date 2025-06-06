@@ -11,6 +11,7 @@ const SinglePhotoSlider = ({ group }) => {
         setImages(imgs);
     }, [group]);
 
+
     const goNext = () => {
         if (currentIndex < images.length - 1) {
             setCurrentIndex(currentIndex + 1);
@@ -33,7 +34,7 @@ const SinglePhotoSlider = ({ group }) => {
                 className="main-photo"
             />
 
-            <div className="controls">
+            <div className="controls hoverButton">
                 <button
                     onClick={goPrev}
                     disabled={currentIndex === 0}
