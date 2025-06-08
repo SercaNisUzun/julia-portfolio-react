@@ -15,7 +15,7 @@ import block1 from '../assets/block1.webp'
 import { useNavigate } from 'react-router-dom';
 import basket1 from '../assets/mareeBasket1.webp'
 import basket2 from '../assets/mareeBasket2.webp'
-import mareeBanner from '../assets/webMareeBanner.webp'
+import mareeBanner from '../assets/webMareeBanner.svg'
 import SinglePhotoSlider from '../components/SinglePhotoSlider';
 import video from '../assets/mareeVideo.mp4'
 
@@ -23,6 +23,10 @@ import video from '../assets/mareeVideo.mp4'
 function Maree() {
 
     const navigate = useNavigate();
+
+    const handleUrl = (url) => {
+        window.open(url, '_blank');
+    }
 
     return (
         <div className='maree'>
@@ -284,10 +288,10 @@ function Maree() {
                 <strong>Если вам откликается мой подход, давайте создадим что-то классное вместе. </strong>
 
                 <div className='footerButtons hoverButton'>
-                    <button style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>
-                    <button style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
-                    <button style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>
-                    <button style={{ gridArea: 'li' }}><img src={linked} alt="Linkedin" />Linkedin</button>
+                    <button onClick={() => handleUrl("mailto:juli.uxui@gmail.com")} style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>
+                    <button onClick={() => handleUrl("https://wa.me/905518420420")} style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
+                    <button onClick={() => handleUrl("https://t.me/juli_designovna")} style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>
+                    <button onClick={() => handleUrl("https://www.linkedin.com/in/juli-l/")} style={{ gridArea: 'li' }}><img src={linked} alt="Linkedin" />Linkedin</button>
                 </div>
 
             </div>

@@ -48,7 +48,7 @@ function MainPage() {
                         <h2>Более 5 лет коммерческого опыта в eCommerce-проектах, мобильных приложениях, веб-платформах и EdTech. Создаю решения, которые повышают конверсию  и увеличивают продажи.</h2>
 
                         <div className='mainButton hoverButton'>
-                            <button>Скачать CV</button>
+                            <a href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><button>Скачать CV</button></a>
                         </div>
 
                     </div>

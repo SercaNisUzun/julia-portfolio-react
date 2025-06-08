@@ -10,9 +10,12 @@ import linked from '../assets/Linkedin.svg'
 import OtherApps from '../components/otherApps'
 import OtherBrands from '../components/OtherBrands'
 import OtherWeb from '../components/OtherWeb'
+import { useNavigate } from 'react-router-dom'
 
 
 function Others() {
+
+    const navigate = useNavigate();
 
     const [tab, changeTab] = useState("tab1");
 
@@ -29,7 +32,9 @@ function Others() {
         }
     };
 
-
+    const handleUrl = (url) => {
+        window.open(url, '_blank');
+    }
 
     return (
         <div className='others'>
@@ -93,10 +98,10 @@ function Others() {
                 <strong>Если вам откликается мой подход, давайте создадим что-то классное вместе. </strong>
 
                 <div className='footerButtons hoverButton'>
-                    <button style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>
-                    <button style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
-                    <button style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>
-                    <button style={{ gridArea: 'li' }}><img src={linked} alt="Linkedin" />Linkedin</button>
+                    <button onClick={() => handleUrl("mailto:juli.uxui@gmail.com")} style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>
+                    <button onClick={() => handleUrl("https://wa.me/905518420420")} style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
+                    <button onClick={() => handleUrl("https://t.me/juli_designovna")} style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>
+                    <button onClick={() => handleUrl("https://www.linkedin.com/in/juli-l/")} style={{ gridArea: 'li' }}><img src={linked} alt="Linkedin" />Linkedin</button>
                 </div>
 
             </div>

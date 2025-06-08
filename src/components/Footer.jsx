@@ -9,6 +9,10 @@ function Footer() {
 
     const navigate = useNavigate();
 
+    const handleUrl = (url) => {
+        window.open(url, '_blank');
+    }
+
     return (
         <div className='footer'>
 
@@ -21,17 +25,17 @@ function Footer() {
                     <ul>
                         <li onClick={() => navigate("/")}>Главная</li>
                         <li>Портфолио</li>
-                        <li style={{ textDecoration: 'underline', textUnderlineOffset: '2px' }}>Скачать CV</li>
+                        <a className='footerLink' href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><li>Скачать CV</li></a>
                         <li onClick={() => navigate("aboutme")}>Обо мне</li>
                     </ul>
 
                 </div>
 
                 <div className='footerButtons'>
-                    <button style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-Mail</button>
-                    <button style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
-                    <button style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>
-                    <button style={{ gridArea: 'li' }}><img src={linked} alt="Linkedin" />LinkedIn</button>
+                    <button onClick={() => handleUrl("mailto:juli.uxui@gmail.com")} style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-Mail</button>
+                    <button onClick={() => handleUrl("https://wa.me/905518420420")} style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>
+                    <button onClick={() => handleUrl("https://t.me/juli_designovna")} style={{ gridArea: 't' }}><img src={tg} alt="Telegram" />Telegram</button>
+                    <button onClick={() => handleUrl("https://www.linkedin.com/in/juli-l/")} style={{ gridArea: 'li' }}><img src={linked} alt="Linkedin" />LinkedIn</button>
                 </div>
 
             </div>

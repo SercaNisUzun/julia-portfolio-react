@@ -126,12 +126,8 @@ nav {
             font-size: 14px;
         }
 
-        #cv {
-            text-decoration: underline;
-            text-underline-offset: 2px;
-        }
-
         li {
+            cursor: pointer;
             list-style: none;
             margin-bottom: 12.8px;
             font-family: "Ubuntu", sans-serif;
@@ -199,5 +195,17 @@ nav {
 
     @include respond-to(large-desktop) {
         display: none;
+    }
+}
+
+a {
+    color: #00412D;
+
+    &:visited {
+        color: #00412D;
+    }
+
+    &:active {
+        color: #00412D
     }
 }

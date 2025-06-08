@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from './Slider'
 import PhotoSlider from './photoSlider'
 import { MdOutlineArrowRightAlt } from "react-icons/md";
-import brandSliderBanner from "../assets/brandSliderBanner.png"
+import brandSliderBanner from "../assets/brandSliderBanner.svg"
 import SinglePhotoSlider from './SinglePhotoSlider';
 
 const sliderData1 = [

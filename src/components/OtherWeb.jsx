@@ -3,9 +3,9 @@ import Slider from './Slider'
 import PhotoSlider from './photoSlider'
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import SinglePhotoSlider from './SinglePhotoSlider';
-import vivienBanner from '../assets/webVivienBanner.webp'
-import mareeBanner from '../assets/webMareeBanner.webp'
-import astoBanner from '../assets/webAstoBanner.webp'
+import vivienBanner from '../assets/webVivienBanner.svg'
+import mareeBanner from '../assets/webMareeBanner.svg'
+import astoBanner from '../assets/webAstoBanner.svg'
 
 
 const sliderData1 = [

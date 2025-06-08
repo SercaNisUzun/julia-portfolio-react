@@ -83,12 +83,17 @@
     }
 
     .projectCard {
+        cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         border: 2px #00412D solid;
         margin: 0 16px 24px 16px;
         padding: 12px;
+
+        &:hover {
+            box-shadow: 5px 5px #DACBFF, 6px 6px black;
+        }
 
         @include respond-to(tablet) {
             margin: 0;

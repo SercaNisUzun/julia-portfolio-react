@@ -9,6 +9,13 @@ function Header() {
     const [mobileMenuToggle, setMobileMenuToogle] = useState(true);
     const [display, setDisplay] = useState("none");
 
+    const scrollToBottom = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    };
+
     const navigateAndCloseMenu = (path) => {
         navigate(path);
         changeDisplay();
@@ -61,10 +68,10 @@ function Header() {
                 <nav style={window.innerWidth < 768 ? { display: display } : {}}>
                     <ul>
                         <li onClick={() => navigateAndCloseMenu("/")} className='onlyMobile'>Главная</li>
-                        <li>Портфолио</li>
-                        <li id='cv'>Скачать CV</li>
+                        <li onClick={() => navigate("/")}>Портфолио</li>
+                        <a href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><li id='cv'>Скачать CV</li></a>
                         <li onClick={() => navigateAndCloseMenu("aboutme")}>Обо мне</li>
-                        <li className='mobileHidden' style={{ border: "2px solid #00412D" }}>Связаться со мной</li>
+                        <li onClick={scrollToBottom} className='mobileHidden' style={{ border: "2px solid #00412D" }}>Связаться со мной</li>
                     </ul>
                 </nav>
             </OutsideClickHandler>
