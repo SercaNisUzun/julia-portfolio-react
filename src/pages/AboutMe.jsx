@@ -1,5 +1,7 @@
 import React from 'react'
-import aboutme from '../assets/aboutme1.jpg'
+import aboutMeMobile from '../assets/AboutMeMobile.webp'
+import aboutMeTablet from '../assets/AboutMeTablet.webp'
+import aboutMeDesktop from '../assets/AboutMeDesktop.webp'
 import wp from '../assets/Whatsapp.svg'
 import tg from '../assets/Telegram.svg'
 import mail from '../assets/Gmail.svg'
@@ -18,7 +20,12 @@ function AboutMe() {
         <div className='aboutMePage'>
 
             <div className='imgConteiner'>
-                <img src={aboutme} alt="" />
+                <picture>
+                    <source srcSet={aboutMeMobile} media="(max-width: 767px)" alt="Me" />
+                    <source srcSet={aboutMeTablet} media="(max-width: 1023px)" alt="Me" />
+                    <source srcSet={aboutMeDesktop} />
+                    <img src={aboutMeDesktop} alt="Me" />
+                </picture>
             </div>
 
             <div className='aboutMeInfo'>

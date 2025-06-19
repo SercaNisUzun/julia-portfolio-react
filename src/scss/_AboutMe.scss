@@ -9,11 +9,11 @@
     }
 
     @include respond-to(desktop) {
-        height: 560px;
+        height: 520px;
     }
 
     @include respond-to(large-desktop) {
-        height: 560px;
+        height: 700px;
     }
 
     img {

@@ -66,7 +66,7 @@ function Header() {
                 }}
             >
                 <nav style={window.innerWidth < 768 ? { display: display } : {}}>
-                    <ul>
+                    <ul className='hoverButton'>
                         <li onClick={() => navigateAndCloseMenu("/")} className='onlyMobile'>Главная</li>
                         <li onClick={() => navigate("/")}>Портфолио</li>
                         <a href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><li id='cv'>Скачать CV</li></a>

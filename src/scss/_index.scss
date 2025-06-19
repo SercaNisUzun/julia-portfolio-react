@@ -7,6 +7,8 @@ body {
 }
 
 .hoverButton {
+
+    li:last-child:hover,
     button:hover {
         box-shadow: 3px 3px #00412D;
         background-color: #DACBFF;
@@ -22,4 +24,16 @@ ul {
 a,
 button {
     cursor: pointer;
+}
+
+.bigScreenWhiteText {
+
+    @include respond-to(desktop) {
+        color: #FFFDF6;
+    }
+
+    @include respond-to(large-desktop) {
+        color: #FFFDF6;
+    }
+
 }

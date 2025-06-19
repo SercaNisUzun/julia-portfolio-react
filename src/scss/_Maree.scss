@@ -57,11 +57,11 @@
     }
 
     @include respond-to(desktop) {
-        height: 720px;
+        height: 700px;
     }
 
     @include respond-to(large-desktop) {
-        height: 1000px;
+        height: 750px;
     }
 }
 
@@ -105,11 +105,7 @@
     }
 
     @include respond-to(tablet) {
-        width: 30%;
-        position: absolute;
-        top: 150px;
-        left: 32px;
-        line-height: normal;
+        margin: 44.8px;
     }
 
     @include respond-to(desktop) {

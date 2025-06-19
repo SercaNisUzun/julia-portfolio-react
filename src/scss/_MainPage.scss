@@ -97,12 +97,12 @@
 
         @include respond-to(tablet) {
             margin: 0;
-            width: 44%;
+            width: 43%;
         }
 
         @include respond-to(desktop) {
             margin: 0;
-            width: 45%;
+            width: 44%;
         }
 
         @include respond-to(large-desktop) {

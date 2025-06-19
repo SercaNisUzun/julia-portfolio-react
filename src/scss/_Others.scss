@@ -39,10 +39,10 @@
 .otherBanner {
 
     .bannerImg {
-        height: 350px;
+        height: 360px;
 
         @include respond-to(tablet) {
-            height: 500px;
+            height: 480px;
         }
 
         @include respond-to(desktop) {
@@ -50,7 +50,7 @@
         }
 
         @include respond-to(large-desktop) {
-            height: 900px;
+            height: 700px;
         }
 
         img {
@@ -110,13 +110,32 @@
 
 #bigScreenBanner {
 
-    @include respond-to(large-desktop) {
+    @include respond-to(desktop) {
         width: 30%;
         position: absolute;
-        top: 400px;
+        top: 250px;
         left: 40px;
         line-height: normal;
         padding: 0;
+
+        h2 {
+            font-size: 22px;
+            font-weight: 300;
+        }
+    }
+
+    @include respond-to(large-desktop) {
+        width: 30%;
+        position: absolute;
+        top: 250px;
+        left: 40px;
+        line-height: normal;
+        padding: 0;
+
+        h2 {
+            font-size: 22px;
+            font-weight: 300;
+        }
     }
 
 }

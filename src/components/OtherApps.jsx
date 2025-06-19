@@ -43,8 +43,6 @@ function OtherApps() {
                 <p>UX & UI Designer  •  Май — Авг 2020</p>
             </div>
 
-
-
             <Slider items={sliderData1} />
 
             <div className='othersContent'>
@@ -76,8 +74,6 @@ function OtherApps() {
                 <h2>НутриКампус (MIIN/ Топ-1 сообщество нутрициологов в СНГ)</h2>
                 <p>UX & UI Designer</p>
             </div>
-
-
 
             <Slider items={sliderData2} />
 
@@ -114,8 +110,6 @@ function OtherApps() {
                 <p>UX & UI Designer</p>
             </div>
 
-
-
             <Slider items={sliderData3} />
 
             <div className='othersContent'>
@@ -148,8 +142,6 @@ function OtherApps() {
                 <h2>My Vet Coach (AstuVet)- приложение “цифровой ветеринар”</h2>
                 <p>UX & UI Designer</p>
             </div>
-
-
 
             <Slider items={sliderData4} />
 
@@ -185,8 +177,6 @@ function OtherApps() {
                 <p>UX & UI Designer</p>
             </div>
 
-
-
             <Slider items={sliderData5} />
 
             <div className='othersContent'>
@@ -220,8 +210,6 @@ function OtherApps() {
                 <h2>AMORE VPN — личный VPN-сервис блогера @amocucinare</h2>
                 <p>UX & UI Designer</p>
             </div>
-
-
 
             <Slider items={sliderData6} />
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import mobileBanner from '../assets/mobOthersBanner.webp'
-import tabBanner from '../assets/tabOthersBanner.webp'
-import bigBanner from '../assets/bigOthersBanner.webp'
+import mobileOthersBanner from '../assets/mobileOthersBanner.webp'
+import tabletOthersBanner from '../assets/tabletOthersBanner.webp'
+import desktopOthersBanner from '../assets/desktopOthersBanner.webp'
+import largeOthersBanner from '../assets/largeOthersBanner.webp'
 import { IoMdArrowDropleft } from "react-icons/io"
 import wp from '../assets/Whatsapp.svg'
 import tg from '../assets/Telegram.svg'
@@ -43,14 +44,15 @@ function Others() {
 
                 <div className='bannerImg'>
                     <picture>
-                        <source srcSet={mobileBanner} media="(max-width: 767px)" />
-                        <source srcSet={tabBanner} media="(max-width: 1439px)" />
-                        <source srcSet={bigBanner} />
-                        <img src={bigBanner} alt="Other projects" />
+                        <source srcSet={mobileOthersBanner} media="(max-width: 767px)" alt="Other projects" />
+                        <source srcSet={tabletOthersBanner} media="(max-width: 1023px)" alt="Other projects" />
+                        <source srcSet={desktopOthersBanner} media="(max-width: 1439px)" alt="Other projects" />
+                        <source srcSet={largeOthersBanner} />
+                        <img src={largeOthersBanner} alt="Other projects" />
                     </picture>
                 </div>
 
-                <div className='aboutText' id='bigScreenBanner'>
+                <div className='aboutText bigScreenWhiteText' id='bigScreenBanner'>
                     <h2>Маленькие проекты, которые прокачали мои навыки </h2>
                     <p>Презентации, брендбуки, приложения, сайты — собрала здесь проекты, в которых решала конкретные задачи через дизайн.</p>
                 </div>

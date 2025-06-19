@@ -1,7 +1,10 @@
 import React from 'react'
 import mobileMaree from '../assets/mobileMaree.webp'
-import maree from '../assets/Maree.webp'
+import mareeTablet from '../assets/mareeTablet.webp'
+import mareeDesktop from '../assets/mareeDesktop.webp'
+import mareeLarge from '../assets/mareeLarge.webp'
 import logoMaree from '../assets/logoMaree.svg'
+import logoMaree2 from '../assets/logoMaree2.svg'
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import wp from '../assets/Whatsapp.svg'
 import tg from '../assets/Telegram.svg'
@@ -18,7 +21,7 @@ import basket2 from '../assets/mareeBasket2.webp'
 import mareeBanner from '../assets/webMareeBanner.svg'
 import SinglePhotoSlider from '../components/SinglePhotoSlider';
 import video from '../assets/mareeVideo.mp4'
-
+import video2 from '../assets/mareeVideo2.mp4'
 
 function Maree() {
 
@@ -34,14 +37,22 @@ function Maree() {
             <div className='aboutMaree'>
                 <div className='imgMaree'>
                     <picture>
-                        <source srcSet={mobileMaree} media="(max-width: 767px)" />
-                        <source srcSet={maree} />
-                        <img src={maree} alt="Maree project" />
+                        <source srcSet={mobileMaree} media="(max-width: 767px)" alt="Maree project" />
+                        <source srcSet={mareeTablet} media="(max-width: 1023px)" alt="Maree project" />
+                        <source srcSet={mareeDesktop} media="(max-width: 1439px)" alt="Maree project" />
+                        <source srcSet={mareeLarge} />
+                        <img src={mareeLarge} alt="Maree project" />
                     </picture>
                 </div>
 
-                <div className='aboutText'>
-                    <img src={logoMaree} alt="" />
+                <div className='aboutText bigScreenWhiteText'>
+
+                    <picture>
+                        <source srcSet={logoMaree} media="(max-width: 1023px)" alt="Maree Logo" />
+                        <source srcSet={logoMaree2} alt="Maree Logo" />
+                        <img src={logoMaree2} alt="Maree Logo" />
+                    </picture>
+
                     <h2>DTC-бренд из США, создающий уход за кожей и волосами на основе натуральных и трендовых ингредиентов.</h2>
                     <p><strong>Роль:</strong>Product designer</p>
                     <p><strong>Фокус:</strong>Корзина, байблок, продуктовая страница, прелендинги</p>
@@ -186,6 +197,22 @@ function Maree() {
                         <li>Добавила видео‑отзывы UGC — он отлично сработал как social prove, усиливая доверие и подтверждая эффект продукта в реальном использовании</li>
                         <li>Добавила новый байблок, о котором говорила выше</li>
                     </ul>
+
+                    <div className='otherWeb'>
+                        <div id='mareeContainer' className='singlePhotoSlider'>
+
+                            <img src={mareeBanner} alt="" />
+                            <video id='video'
+                                src={video2}
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                            />
+
+                        </div>
+
+                    </div>
 
                     <div className='purpleBgText'>
                         <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>+12 % конверсия PDP, больше времени на странице, чаще кликают «Добавить в корзину».</p>
