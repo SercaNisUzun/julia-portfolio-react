@@ -34,7 +34,7 @@ function MainPage() {
 
     return (
 
-        <div>
+        <section id='mainPage'>
 
             <div className='mainDiv'>
                 <div className='mainPhoto'>
@@ -139,7 +139,7 @@ function MainPage() {
 
             </div>
 
-        </div>
+        </section>
     )
 }
 

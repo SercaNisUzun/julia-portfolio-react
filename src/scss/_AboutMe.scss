@@ -387,7 +387,7 @@ hr {
     }
 
     @include respond-to(large-desktop) {
-        width: 100%;
+
         margin: auto;
     }
 

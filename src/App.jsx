@@ -11,7 +11,9 @@ function App() {
     <>
       <ScrollToTop />
       <Header />
-      <RouterConfig />
+      <main>
+        <RouterConfig />
+      </main>
       <Footer />
     </>
   )

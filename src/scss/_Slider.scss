@@ -1,5 +1,3 @@
-@import 'mixins', 'variables';
-
 .slider-wrap {
     width: 100%;
     overflow: hidden;
@@ -15,21 +13,24 @@
     font-weight: 500;
     line-height: 150%;
     will-change: transform;
-    animation: scrolling 30s linear infinite;
     white-space: nowrap;
-
-    @keyframes scrolling {
-        0% {
-            transform: translateX(0);
-        }
-
-        100% {
-            transform: translateX(-50%);
-        }
-    }
 
     img {
         margin: 0 12.8px;
         vertical-align: middle;
+    }
+
+    &.animate {
+        animation: scrolling 30s linear infinite;
+    }
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
     }
 }
