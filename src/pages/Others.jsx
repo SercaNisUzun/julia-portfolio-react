@@ -12,9 +12,12 @@ import OtherApps from '../components/otherApps'
 import OtherBrands from '../components/OtherBrands'
 import OtherWeb from '../components/OtherWeb'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 
 function Others() {
+
+    const { t } = useTranslation('others');
 
     const navigate = useNavigate();
 
@@ -54,8 +57,8 @@ function Others() {
                     </div>
 
                     <div className='aboutText bigScreenWhiteText' id='bigScreenBanner'>
-                        <h2>Маленькие проекты, которые прокачали мои навыки </h2>
-                        <p>Презентации, брендбуки, приложения, сайты — собрала здесь проекты, в которых решала конкретные задачи через дизайн.</p>
+                        <h2>{t('header')}</h2>
+                        <p>{t('headerP')}</p>
                     </div>
 
                 </div>
@@ -63,7 +66,7 @@ function Others() {
                 <div className='othersContent'>
 
                     <div className='hoverButton'>
-                        <button onClick={() => navigate("/")} className='greenBack'><IoMdArrowDropleft style={{ fontSize: '50px' }} />Назад
+                        <button onClick={() => navigate("/")} className='greenBack'><IoMdArrowDropleft style={{ fontSize: '50px' }} />{t('back')}
                         </button>
                     </div>
 
@@ -72,19 +75,19 @@ function Others() {
                             onClick={() => changeTab('tab1')}
                             className={tab === 'tab1' ? 'active' : ''}
                         >
-                            Приложения
+                            {t('tab1')}
                         </button>
                         <button
                             onClick={() => changeTab('tab2')}
                             className={tab === 'tab2' ? 'active' : ''}
                         >
-                            Вебсайты
+                            {t('tab2')}
                         </button>
                         <button
                             onClick={() => changeTab('tab3')}
                             className={tab === 'tab3' ? 'active' : ''}
                         >
-                            Брендинг
+                            {t('tab3')}
                         </button>
                     </div>
 
@@ -97,8 +100,8 @@ function Others() {
 
 
                 <div className='contact'>
-                    <p>Я всегда открыта новым проектам и интересным идеям.</p>
-                    <strong>Если вам откликается мой подход, давайте создадим что-то классное вместе. </strong>
+                    <p>{t('contactP')}</p>
+                    <strong>{t('contactStrong')}</strong>
 
                     <div className='footerButtons hoverButton'>
                         <button onClick={() => handleUrl("mailto:juli.uxui@gmail.com")} style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>

@@ -4,6 +4,7 @@ import PhotoSlider from './photoSlider'
 import { MdOutlineArrowRightAlt } from "react-icons/md";
 import brandSliderBanner from "../assets/brandSliderBanner.svg"
 import SinglePhotoSlider from './SinglePhotoSlider';
+import { useTranslation } from 'react-i18next';
 
 const sliderData1 = [
     "Welcome Book", "New-Hire Journey", "Onboarding", "Company Culture",
@@ -27,11 +28,14 @@ const sliderData4 = [
 
 
 function OtherBrands() {
+
+    const { t } = useTranslation('otherBrand');
+
     return (
         <div className='otherBrands'>
 
             <div className='aboutText'>
-                <h2>Maree Welcome Book — онбординг-презентация для новых сотрудников</h2>
+                <h2>{t('mareeHeader')}</h2>
             </div>
 
             <Slider items={sliderData1} />
@@ -39,9 +43,7 @@ function OtherBrands() {
             <div className='othersContent'>
 
                 <div>
-                    <p>
-                        Welcome Book Maree знакомит новичка с культурой компании: миссия, ценности, карта команд, ключевые процессы и чек-лист первых шагов сверстаны в фирменной палитре и паттернах бренда. Кликабельные ссылки на Notion, Slack и HR-контакты ведут прямо к нужным ресурсам. Цель — убрать хаос первой недели и создать чувство причастности; после запуска HR фиксируют −30 % времени на онбординг.
-                    </p>
+                    <p>{t('mareeP')}</p>
                 </div>
 
                 <div className='singlePhotoSlider'>
@@ -54,7 +56,7 @@ function OtherBrands() {
             </div>
 
             <div className='aboutText'>
-                <h2>«Релокация сотрудников Maree» — интерактивный HR-гайд</h2>
+                <h2>{t('maree2Header')}</h2>
             </div>
 
             <Slider items={sliderData2} />
@@ -62,9 +64,7 @@ function OtherBrands() {
             <div className='othersContent'>
 
                 <div>
-                    <p>
-                        Интерактивный гайд по релокации объединяет всё критичное для переезда: пошаговый тайм-лайн с дэдлайнами, визовые варианты, бюджет-калькулятор, карты районов и подборка проверенных сервисов жилья, чек-листы вещей и документов, а также прямые контакты HR- и юридической команды — всё в фирменной графике Maree. Главная цель — снизить стресс сотрудника, унифицировать процедуру для всех стран и сократить нагрузку на HR, чтобы команда тратила меньше времени на одноразовые вопросы и могла фокусироваться на стратегических задачах.
-                    </p>
+                    <p>{t('maree2P')}</p>
                 </div>
 
                 <div className='singlePhotoSlider'>
@@ -77,7 +77,7 @@ function OtherBrands() {
             </div>
 
             <div className='aboutText'>
-                <h2>China Relocation Factsheet — экспресс-гид для Maree</h2>
+                <h2>{t('chinaHeader')}</h2>
             </div>
 
             <Slider items={sliderData3} />
@@ -85,9 +85,7 @@ function OtherBrands() {
             <div className='othersContent'>
 
                 <div>
-                    <p>
-                        Factsheet «Переезд в Китай» упаковывает всё ключевое: пошаговый тайм-лайн виз и разрешений, обзор банков и рабочих карт (UnionPay, Alipay & WeChat Pay), выбор мобильных операторов, готовые таблицы расходов и способы оплаты, краткие профили городов с арендами и климатом, бытовые лайф-хаки (VPN, переводчики, экстренные номера) и чек-лист документов на выезд / въезд — всё в фирменной графике Maree. Цель гида закрыть повторяющиеся вопросы, что точно сэкономит время HR и даст сотруднику готовый план действий от сборов чемодана до первой зарплаты в Китае.
-                    </p>
+                    <p>{t('chinaP')}</p>
                 </div>
 
                 <div id='brandRegularSlide'>
@@ -99,7 +97,7 @@ function OtherBrands() {
             </div>
 
             <div className='aboutText'>
-                <h2>PROFSER Brand Guidelines — брендбук для аутсорсинговой бухгалтерской фирмы</h2>
+                <h2>{t('profHeader')}</h2>
             </div>
 
             <Slider items={sliderData4} />
@@ -107,9 +105,7 @@ function OtherBrands() {
             <div className='othersContent'>
 
                 <div>
-                    <p>
-                        Brandbook задаёт единый визуальный язык: миссия и позиционирование, тон общения с клиентами, правила логотипа и его safe-zone, фирменная палитра (чёрный / белый / акцентный красный), типографика Nante Sans + Montserrat с чёткой иерархией. Гайд позволяет маркетингу и подрядчикам выпускать документы и соцмедиа-креативы без расхождений в стиле компании, поддерживая узнаваемость и экспертный образ PROFSER.
-                    </p>
+                    <p>{t('profP')}</p>
                 </div>
 
                 <div className='singlePhotoSlider'>

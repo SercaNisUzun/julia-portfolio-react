@@ -7,10 +7,11 @@ import others from '../assets/mainCardOthers.webp'
 import asto from '../assets/mainCardAsto.webp'
 import { RiArrowRightFill } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 
 function MainPage() {
-
+    const { t } = useTranslation('mainpage');
     const navigate = useNavigate();
 
     const skills = [
@@ -44,11 +45,11 @@ function MainPage() {
 
                 <div className='greenBg'>
                     <div className='mainText'>
-                        <h1>Привет, я Юлия — продуктовый дизайнер</h1>
-                        <h2>Более 5 лет коммерческого опыта в eCommerce-проектах, мобильных приложениях, веб-платформах и EdTech. Создаю решения, которые повышают конверсию  и увеличивают продажи.</h2>
+                        <h1>{t('mainHeader')}</h1>
+                        <h2>{t('mainText')}</h2>
 
                         <div className='mainButton hoverButton'>
-                            <a href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><button>Скачать CV</button></a>
+                            <a href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><button>{t('cv')}</button></a>
                         </div>
 
                     </div>
@@ -62,7 +63,7 @@ function MainPage() {
 
             <div className='projectLinks'>
 
-                <h2>Создаю проекты,которые нравятся людям</h2>
+                <h2>{t('cardsHeader')}</h2>
 
                 <div className='projectCards'>
                     <div onClick={() => navigate("/maree")} className='projectCard'>
@@ -73,10 +74,10 @@ function MainPage() {
                             <p>(E-commerce/Shopify/Amazon)</p>
                         </div>
 
-                        <p className='cardInfo'>В проекте MAREE я улучшала UX/UI веб-сайта, делая взаимодействие с брендом более удобным и эффективным, а так же разрабатывала пре-лендинги с высокой конверсией и профитом.</p>
+                        <p className='cardInfo'>{t('mareeCardText')}</p>
 
                         <div className='cardClick'>
-                            <p >Изучить кейс <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
+                            <p >{t('goButton')} <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
                         </div>
 
 
@@ -86,14 +87,14 @@ function MainPage() {
                         <img src={others} alt="" />
 
                         <div className='cardTitle'>
-                            <h3>Другие проекты</h3>
+                            <h3>{t('OthersHeader')}</h3>
                             <p>(Web/App/Brand)</p>
                         </div>
 
-                        <p className='cardInfo'>Менее масштабные, но не менее важные этапы моего пути — это возможность показать вам больше о моих навыках и стиле работы. Вы сможете лучше понять, насколько совпадают наши вайбы, видение прекрасного и подходы к решению пользовательских задач.</p>
+                        <p className='cardInfo'>{t('othersText')}</p>
 
                         <div className='cardClick'>
-                            <p >Изучить кейс <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
+                            <p >{t('goButton')} <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
                         </div>
 
                     </div>
@@ -106,7 +107,7 @@ function MainPage() {
                             <p>(Web platform/App)</p>
                         </div>
 
-                        <p className='cardInfo'>В компании Astuvet я создала MVP приложения MyVetCoach, успешно презентованного инвесторам на коференции в США, а так же разработала стратегию монетизации для платформы.</p>
+                        <p className='cardInfo'>{t('astoText')}</p>
 
                         <div className='cardClick'>
                             <p >Coming soon <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>
@@ -118,11 +119,11 @@ function MainPage() {
                         <img src={miin} alt="" />
 
                         <div className='cardTitle'>
-                            <h3>НутриКампус (MIIN)</h3>
+                            <h3>{t('nutriHeader')}</h3>
                             <p>(App)</p>
                         </div>
 
-                        <p className='cardInfo'>В проекте НутриКампус я занималась редизайном интерфейса, что позволило увеличить конверсию на 25%. Также внедрила фичи для монетизации через продажу вебинаров и курсов.</p>
+                        <p className='cardInfo'>{t('nutriText')}</p>
 
                         <div className='cardClick'>
                             <p >Coming soon <RiArrowRightFill style={{ verticalAlign: 'middle', fontSize: '22px' }} /></p>

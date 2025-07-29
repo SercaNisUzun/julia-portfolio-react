@@ -8,9 +8,12 @@ import mail from '../assets/Gmail.svg'
 import linked from '../assets/Linkedin.svg'
 import { useNavigate } from 'react-router-dom'
 import PhotoSliderInfinite from '../components/PhotoSliderInfinite'
+import { useTranslation } from 'react-i18next';
 
 
 function AboutMe() {
+
+    const { t } = useTranslation('aboutme');
 
     const handleUrl = (url) => {
         window.open(url, '_blank');
@@ -31,13 +34,9 @@ function AboutMe() {
 
                 <div className='aboutMeInfo'>
                     <div className='aboutMe'>
-                        <p>
-                            Я —Джулия из солнечной Анталии, Product/UX/UI дизайнер с глубоким пониманием визуальной эстетики и функциональности продуктов.
-                        </p>
+                        <p>{t('mainText1')}</p>
 
-                        <p>
-                            Дизайн для меня это не только про визуальные решения, но и про способ решать проблемы, улучшать взаимодействие юзеров с технологиями и создавать смыслы. Моя цель — создавать не только красивые, но и удобные интерфейсы, которые решают реальные проблемы юзеров.
-                        </p>
+                        <p>{t('mainText2')}</p>
 
                         <hr />
 
@@ -45,11 +44,9 @@ function AboutMe() {
 
 
                     <div className='aboutMe2'>
-                        <h2>Мой подход в дизайне</h2>
+                        <h2>{t('header1')}</h2>
 
-                        <p>
-                            Я создаю дизайнерские решения, опираясь на цели бизнеса и потребности аудитории. Мой рабочий процесс включает в себя исследование, прототипирование и тестирование, чтобы разрабатывать интерфейсы, которые улучшают пользовательский опыт, повышают конверсию и приносят измеримые результаты.
-                        </p>
+                        <p>{t('headerText1')}</p>
 
                     </div>
 
@@ -57,22 +54,22 @@ function AboutMe() {
 
                     <div className='cvArea'>
 
-                        <h2>Проекты и достижения</h2>
+                        <h2>{t('header2')}</h2>
 
                         <div className='projects'>
 
                             <div className='company'>
                                 <h3>MAREE</h3>
                                 <h4>Product/UI/UX Designer</h4>
-                                <p>(апрель 2024 - настоящее время)</p>
+                                <p>{t('mareeDate')}</p>
                             </div>
                             <div className='content'>
-                                <strong>Достижения:</strong>
+                                <strong>{t('liStrong')}</strong>
                                 <ul>
-                                    <li>- Повысила ROAS покупок с 0.80 до 2.80.</li>
-                                    <li>- Внедрила систему подписок на продуктовых страницах, что увеличило LTV клиентов на 15%.</li>
-                                    <li>- Увеличила AOV с $24 до $70-90.</li>
-                                    <li>- Средний CTR лендингов, созданных мной, составил от 15% до 35%.</li>
+                                    <li>- {t('mareeLi1')} <strong>{t('mareeLi1strong')}</strong></li>
+                                    <li>- {t('mareeLi2')} <strong>{t('mareeLi2strong')}</strong> </li>
+                                    <li>- {t('mareeLi3')} <strong>{t('mareeLi3strong')}</strong></li>
+                                    <li>- <strong>{t('mareeLi4strong')}</strong> {t('mareeLi4Li')}</li>
                                 </ul>
                             </div>
 
@@ -82,11 +79,11 @@ function AboutMe() {
                                 <p>(2022-2024)</p>
                             </div>
                             <div className='content'>
-                                <strong>Достижения:</strong>
+                                <strong>{t('liStrong')}</strong>
                                 <ul>
-                                    <li>- <strong>Успешная разработка MVP приложения для презентации на конференции в США:</strong> Работала над UI/UX дизайном первого MVP приложения MyVetCoach для демонстрации ключевых функций продукта инвесторам.</li>
-                                    <li>- <strong>Повышение конверсии:</strong> Успешно увеличила конверсию на 20% за счет оптимизации пользовательского пути и проведения A/B тестирований.</li>
-                                    <li>- <strong>Монетизация проекта:</strong> Разработала и внедрила стратегию монетизации приложения, что позволило заработать $10,000 в первый месяц после запуска.</li>
+                                    <li>- <strong>{t('astoStrong1')}</strong> {t('astoStrong1p')}</li>
+                                    <li>- <strong>{t('astoStrong2')}</strong> {t('astoStrong2p')}</li>
+                                    <li>- <strong>{t('astoStrong3')}</strong> {t('astoStrong3p')}</li>
                                 </ul>
                             </div>
 
@@ -96,15 +93,15 @@ function AboutMe() {
                                 <p>(2021-2022)</p>
                             </div>
                             <div className='content'>
-                                <p className='contentFix'>Приложение МИИН “НутриКампус”</p>
+                                <p className='contentFix'>{t('nutriHeader1')}</p>
                                 <ul>
-                                    <li>- Увеличила конверсию приложения на 25% благодаря редизайну интерфейса.</li>
-                                    <li>- Привлекла более 50 000 новых пользователей с помощью улучшения UX.</li>
-                                    <li>- Внедрила успешную монетизацию через продажу вебинаров и курсов в приложении.</li>
+                                    <li>{t('nutriLi11')}</li>
+                                    <li>{t('nutriLi12')}</li>
+                                    <li>{t('nutriLi13')}</li>
                                 </ul>
-                                <p className='contentFix'>Проект “Твой Наставник”</p>
+                                <p className='contentFix'>{t('nutriHeader2')}</p>
                                 <ul>
-                                    <li>- Работала над успешным релизом MVP приложения для менторской программы, в результате получив первые положительные отзывы от пользователей и менторов.</li>
+                                    <li>{t('nutriLi2')}</li>
                                 </ul>
                             </div>
 
@@ -115,9 +112,9 @@ function AboutMe() {
                             </div>
                             <div className='content'>
                                 <ul>
-                                    <li>- <strong>Создание и поддержка полного цикла дизайна:</strong> От концепции до реализации, включая разработку дизайн-систем и пользовательских интерфейсов.</li>
-                                    <li>- <strong>Анализ бизнеса и прототипирование:</strong> Создание прототипов, сочетающих бизнес-цели, потребности пользователей и технические требования.</li>
-                                    <li>- <strong>Глубокие исследования и тестирование:</strong> Проведение конкурентного анализа, A/B тестов, интервью и юзабилити-тестов для улучшения UX.</li>
+                                    <li>- <strong>{t('taxiStrong1')}</strong> {t('taxiStrong1p')}</li>
+                                    <li>- <strong>{t('taxiStrong2')}</strong> {t('taxiStrong2p')}</li>
+                                    <li>- <strong>{t('taxiStrong3')}</strong> {t('taxiStrong3p')}</li>
                                 </ul>
                             </div>
                         </div>
@@ -130,9 +127,9 @@ function AboutMe() {
 
                         <div className='sliderText'>
 
-                            <h2>Где я беру вдохновение</h2>
+                            <h2>{t('sliderHeader')}</h2>
 
-                            <p>Прекрасное я нахожу в простом: прогулки у моря, тишина гор и красота природы Анталии. Эти вещи наполняют меня вдохновением и идеями. Ниже вы найдете карусель снимков, которые передают мою любовь к архитектуре, природе и её гармонии.</p>
+                            <p>{t('sliderText')}</p>
 
                         </div>
 
@@ -148,22 +145,22 @@ function AboutMe() {
                     <div className='boxCutter'>
 
                         <div className='greenConteiner'>
-                            <div className='boxBorder'><p>Разработка и поддержка библиотеки проекта</p></div>
-                            <div className='adaptiveBorder'><p>Конкурентный анализ</p></div>
+                            <div className='boxBorder'><p>{t('green1')}</p></div>
+                            <div className='adaptiveBorder'><p>{t('green2')}</p></div>
                         </div>
 
                         <hr />
 
                         <div className='greenConteiner'>
-                            <div className='boxBorder'><p>Юзабилити тестирование</p></div>
-                            <div className='adaptiveBorder'><p>Составление user-персон</p></div>
+                            <div className='boxBorder'><p>{t('green3')}</p></div>
+                            <div className='adaptiveBorder'><p>{t('green4')}</p></div>
                         </div>
 
                         <hr />
 
                         <div className='greenConteiner'>
-                            <div className='boxBorder'><p>Работа с метриками</p></div>
-                            <div className='adaptiveBorder'><p>Работа с кросс-функциональными командами</p></div>
+                            <div className='boxBorder'><p>{t('green5')}</p></div>
+                            <div className='adaptiveBorder'><p>{t('green6')}</p></div>
                         </div>
 
                         <hr className='onlyMobile' />
@@ -174,22 +171,22 @@ function AboutMe() {
                     <div className='boxCutter'>
 
                         <div className='greenConteiner'>
-                            <div className='boxBorder'><p>Приоритизация задач и составление Roadmap’ов</p></div>
-                            <div><p>Анализ фич и паттернов</p></div>
+                            <div className='boxBorder'><p>{t('green7')}</p></div>
+                            <div><p>{t('green8')}</p></div>
                         </div>
 
                         <hr />
 
                         <div className='greenConteiner'>
-                            <div className='boxBorder'><p>A/B тестирование</p></div>
-                            <div><p>User stories</p></div>
+                            <div className='boxBorder'><p>{t('green9')}</p></div>
+                            <div><p>{t('green10')}</p></div>
                         </div>
 
                         <hr />
 
                         <div className='greenConteiner'>
-                            <div className='boxBorder'><p>UX/CX исследования</p></div>
-                            <div><p>iOS и Android Guidelines</p></div>
+                            <div className='boxBorder'><p>{t('green11')}</p></div>
+                            <div><p>{t('green12')}</p></div>
                         </div>
 
                     </div>
@@ -198,8 +195,8 @@ function AboutMe() {
 
 
                 <div className='contact'>
-                    <p>Я всегда открыта новым проектам и интересным идеям.</p>
-                    <strong>Если вам откликается мой подход, давайте создадим что-то классное вместе. </strong>
+                    <p>{t('contactText')}</p>
+                    <strong>{t('contactStrong')}</strong>
 
                     <div className='footerButtons hoverButton'>
                         <button onClick={() => handleUrl("mailto:juli.uxui@gmail.com")} style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>

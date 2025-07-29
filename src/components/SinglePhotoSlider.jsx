@@ -24,7 +24,7 @@ const SinglePhotoSlider = ({ group }) => {
         }
     };
 
-    if (!images.length) return <p>Yükleniyor...</p>;
+    if (!images.length) return <p>Loading...</p>;
 
     return (
         <div className="single-photo-slider">

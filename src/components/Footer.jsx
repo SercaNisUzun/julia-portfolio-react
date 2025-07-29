@@ -4,9 +4,10 @@ import tg from '../assets/Telegram.svg'
 import mail from '../assets/Gmail.svg'
 import linked from '../assets/Linkedin.svg'
 import { useNavigate } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
 
 function Footer() {
-
+    const { t } = useTranslation('footerNheader');
     const navigate = useNavigate();
 
     const handleUrl = (url) => {
@@ -25,10 +26,10 @@ function Footer() {
 
 
                         <ul>
-                            <li onClick={() => navigate("/")}>Главная</li>
-                            <li>Портфолио</li>
-                            <a className='footerLink' href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><li>Скачать CV</li></a>
-                            <li onClick={() => navigate("aboutme")}>Обо мне</li>
+                            <li onClick={() => navigate("/")}>{t('mainpage')}</li>
+                            <li>{t('portfolio')}</li>
+                            <a className='footerLink' href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><li>{t('cv')}</li></a>
+                            <li onClick={() => navigate("aboutme")}>{t('aboutme')}</li>
                         </ul>
 
 

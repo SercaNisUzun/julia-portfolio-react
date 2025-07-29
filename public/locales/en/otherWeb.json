@@ -1,0 +1,23 @@
+{
+    "vivienHeader": "Vivien Decor — event décor studio website (Sochi)",
+    "liHeader": "What I did",
+    "vivienLi1": "Built the information architecture — mapped out the flow: Home → Collections → Course → FAQ → Contacts.",
+    "vivienLi2": "Designed the UX flow for the portfolio — card layout with filters across four service areas, helping users instantly find relevant cases.",
+    "vivienLi3": "Created a UI kit: brand palette, modular grid, gallery components, and CTA blocks; fully mobile-first.",
+    "vivienLi4": "Prepared dev handoff documentation — SEO keyword table, prewritten meta tags (title, description, OG), and a guide on image export/compression to ensure pixel-perfect implementation.",
+    "purpleHeader": "As a result, ",
+    "purple1p": "the portfolio website became a major lead source: in the first quarter, 25% of all orders came through the website with no ad spend.",
+    "astoHeader": "AstuVet — Web Platform for Veterinary Clinics",
+    "astoLi1": "Built a modular IA: unified navigation for the dashboard, AstuEdu library (3,500+ handout cards), dosage calculators, 3D pathology models, chat, and training courses.",
+    "astoLi2": "Introduced a social-sharing feature for handout cards — clinics can post materials directly to social platforms or client chats. This became a freemium monetization channel: basic limits are free, while extended packs and analytics are subscription-based.",
+    "astoLi3": "Created the AstuCore design system — 70+ responsive components, tables, and interactive 3D illustrations; unified color and typography tokens simplify scaling.",
+    "astoLi4": "Streamlined clinic onboarding — registration, branding setup, and patient base import now take ≤ 5 minutes.",
+    "purple2p": "within 6 months of launch, hundreds of clinics across the U.S. started using the platform; 25,000+ handout cards were shared with pet owners; the new “share-to-social” feature converts 15% of clinics into paid subscribers; and the AstuVet project raised €450K in investment for scaling.",
+    "mareeHeader": "MAREE — Shopify-based e-commerce project",
+    "mareeLi1": "Developed a new cart with strong UX: sticky checkout button, gamified progress bar, and an in-cart option to switch to subscription with scheduled delivery. These improvements boosted LTV and reduced cart abandonment.",
+    "mareeLi2": "Designed PDPs for product bundles — media buyers drove traffic directly to these pages, achieving high ROAS and selling at break-even.",
+    "mareeLi3": "Enhanced product page content — expandable copy blocks, Before / After section, detailed ingredient breakdowns, and a well-structured listing; this built trust and reduced the number of user questions in the chat.",
+    "mareeLi4": "Created conversion-focused pre-landing pages for Facebook ads to warm up audiences before sending them to the main site.",
+    "mareeLi5": "Conducted research and A/B tests to identify growth opportunities, improve conversion rates and AOV, and uncover UX friction points.",
+    "purple3p": "after the redesign: bundles now generate 28% of all orders, AOV increased by 18%, and mobile conversion rose from 1.9% to 5.5%."
+}

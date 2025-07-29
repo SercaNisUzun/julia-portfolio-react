@@ -3,8 +3,12 @@ import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
 import { useNavigate } from 'react-router-dom';
 import OutsideClickHandler from 'react-outside-click-handler';
+import { useTranslation } from 'react-i18next';
 
 function Header() {
+    const { t } = useTranslation('footerNheader');
+    const { i18n } = useTranslation();
+
     const navigate = useNavigate();
     const [mobileMenuToggle, setMobileMenuToogle] = useState(true);
     const [display, setDisplay] = useState("none");
@@ -32,7 +36,7 @@ function Header() {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth >= 768) {
+            if (window.innerWidth >= 1023) {
                 setDisplay("block");
                 setMobileMenuToogle(true);
             }
@@ -61,18 +65,22 @@ function Header() {
 
                 <OutsideClickHandler
                     onOutsideClick={() => {
-                        if (!mobileMenuToggle && window.innerWidth < 768) {
+                        if (!mobileMenuToggle && window.innerWidth < 1024) {
                             changeDisplay();
                         }
                     }}
                 >
-                    <nav style={window.innerWidth < 768 ? { display: display } : {}}>
+                    <nav style={window.innerWidth < 1024 ? { display: display } : {}}>
                         <ul className='hoverButton'>
-                            <li onClick={() => navigateAndCloseMenu("/")} className='onlyMobile'>Главная</li>
-                            <li onClick={() => navigate("/")}>Портфолио</li>
-                            <a href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><li id='cv'>Скачать CV</li></a>
-                            <li onClick={() => navigateAndCloseMenu("aboutme")}>Обо мне</li>
-                            <li onClick={scrollToBottom} className='mobileHidden' style={{ border: "2px solid #00412D" }}>Связаться со мной</li>
+                            <li onClick={() => navigateAndCloseMenu("/")} className='onlyMobile'>{t('mainpage')}</li>
+                            <li onClick={() => navigate("/")}>{t('portfolio')}</li>
+                            <a href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><li id='cv'>{t('cv')}</li></a>
+                            <li onClick={() => navigateAndCloseMenu("aboutme")}>{t('aboutme')}</li>
+                            <div className='lngBut'>
+                                <button onClick={() => i18n.changeLanguage('ru')}>RU</button>
+                                <button onClick={() => i18n.changeLanguage('en')}>EN</button>
+                            </div>
+                            <li onClick={scrollToBottom} className='mobileHidden' style={{ border: "2px solid #00412D" }}>{t('contact')}</li>
                         </ul>
                     </nav>
                 </OutsideClickHandler>

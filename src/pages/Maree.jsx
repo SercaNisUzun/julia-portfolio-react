@@ -22,8 +22,12 @@ import mareeBanner from '../assets/webMareeBanner.svg'
 import SinglePhotoSlider from '../components/SinglePhotoSlider';
 import video from '../assets/mareeVideo.mp4'
 import video2 from '../assets/mareeVideo2.mp4'
+import { useTranslation } from 'react-i18next';
 
 function Maree() {
+
+    const { t } = useTranslation('maree');
+    const { i18n } = useTranslation();
 
     const navigate = useNavigate();
 
@@ -54,52 +58,52 @@ function Maree() {
                             <img src={logoMaree2} alt="Maree Logo" />
                         </picture>
 
-                        <h2>DTC-бренд из США, создающий уход за кожей и волосами на основе натуральных и трендовых ингредиентов.</h2>
-                        <p><strong>Роль:</strong>Product designer</p>
-                        <p><strong>Фокус:</strong>Корзина, байблок, продуктовая страница, прелендинги</p>
-                        <p><strong>Цель:</strong>Повысить конверсию и улучшить пользовательский опыт</p>
+                        <h2>{t('banner')}</h2>
+                        <p><strong>{t('bannerStrong1')}</strong>{t('bannerStrong1p')}</p>
+                        <p><strong>{t('bannerStrong2')}</strong>{t('bannerStrong2p')}</p>
+                        <p><strong>{t('bannerStrong3')}</strong>{t('bannerStrong3p')}</p>
                     </div>
                 </div>
 
                 <div className='mareeContent'>
 
                     <div className='hoverButton'>
-                        <button onClick={() => navigate("/")} className='greenBack'><IoMdArrowDropleft style={{ fontSize: '50px' }} />Назад
+                        <button onClick={() => navigate("/")} className='greenBack'><IoMdArrowDropleft style={{ fontSize: '50px' }} />{t('back')}
                         </button>
                     </div>
 
                     <div>
-                        <h2>Контекст</h2>
-                        <p>Когда я присоединилась к проекту, MAREE уже был узнаваемым брендом в США с сильным продуктом, но цифровой опыт был фрагментирован: ключевые точки принятия решения (корзина, байблок, PDP, рекламные прелендинги) не работали как единое целое.</p>
+                        <h2>{t('contextHeader')}</h2>
+                        <p>{t('contextText')}</p>
                     </div>
 
                     <hr />
 
                     <div>
-                        <h2>Задачи</h2>
+                        <h2>{t('objHeader')}</h2>
                         <ul style={{ listStyle: 'none' }}>
                             <li><MdOutlineArrowRightAlt className='liArrow' />
-                                <span>Связать пользовательский путь от рекламы до покупки.</span></li>
+                                <span>{t('objLi1')}</span></li>
                             <li><MdOutlineArrowRightAlt className='liArrow' />
-                                <span>Снизить количество брошенных корзин и увеличить средний чек.</span></li>
+                                <span>{t('objLi2')}</span></li>
                             <li><MdOutlineArrowRightAlt className='liArrow' />
-                                <span>Показать ценность продукта через визуал, UGC и чёткую выгоду.</span></li>
+                                <span>{t('objLi3')}</span></li>
                         </ul>
                     </div>
 
                     <hr />
 
                     <div>
-                        <h2>Решение 1: Корзина</h2>
-                        <p><strong>Проблема</strong>- пользователь доходит до корзины и не завершает покупку.</p>
+                        <h2>{t('part1header')}</h2>
+                        <p><strong>{t('part1strong1')}</strong>{t('part1strong1p')}</p>
 
-                        <strong>Что сделала</strong>
+                        <strong>{t('part1strong2')}</strong>
                         <ul>
-                            <li>Проанализировала &gt; 100 сессий, выделила основное барьерное мышление: «а точно ли это мне нужно?»</li>
-                            <li>Добавила триггеры доверия (эмоциональное подтверждение «вы сделали правильный выбор»).</li>
-                            <li>Добавила клеймы о выгодных предложения при покупке нескольких айтемов</li>
-                            <li>Внедрила прогресс‑бар и безопасный UX удаления товара.</li>
-                            <li>Протестировала выгодные предложения при покупке нескольких позиций.</li>
+                            <li>{t('part1Li1')}</li>
+                            <li>{t('part1Li2')}</li>
+                            <li>{t('part1Li3')}</li>
+                            <li>{t('part1Li4')}</li>
+                            <li>{t('part1Li5')}</li>
                         </ul>
 
                         <div className='otherWeb'>
@@ -125,30 +129,30 @@ function Maree() {
                         </div>
 
                         <div className='purpleBgText'>
-                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>количество брошенных корзин снизилось на 17% в первые 2 недели после внедрения.</p>
+                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleStrong')}</strong>{t('purple1strongP')}</p>
                         </div>
                     </div>
 
                     <hr />
 
                     <div>
-                        <h2>Решение 2: Байблок</h2>
-                        <p><strong>Проблема</strong>- Изначально байблок давил на пользователя и лишал его выбора, тк по умолчанию была выбрана подписка, что приносило большое количество чарджбеков ежемесячно.</p>
+                        <h2>{t('part2header')}</h2>
+                        <p><strong>{t('part2strong1')}</strong>{t('part2strong1p')}</p>
 
-                        <strong>Что сделала</strong>
+                        <strong>{t('part2strong2')}</strong>
                         <ul>
-                            <li>Сделала пошаговый выбор: сначала количество айтемов, потом способ покупки (Subscription или One- time)</li>
-                            <li>Визуально выделила оптимальный вариант (2 товара, +бесплатная доставка)</li>
-                            <li>По умолчанию сделали выбранной разовую покупку: теперь пользователь сам выбирает, но сразу видит, что теряет, если не подписывается</li>
-                            <li>Добавила пояснения прямо в блок: что входит в цену, что он экономит, что получает подписавшись на регулярную доставку продукта</li>
-                            <li>Убрала лишний текст и маркетинговый «шум»</li>
+                            <li>{t('part2Li1')}</li>
+                            <li>{t('part2Li2')}</li>
+                            <li>{t('part2Li3')}</li>
+                            <li>{t('part2Li4')}</li>
+                            <li>{t('part2Li5')}</li>
                         </ul>
 
                         <div className='blockPic'>
 
                             <div className='flexBlock'>
 
-                                <strong>Старая версия: Интерфейс перегружен</strong>
+                                <strong>{t('blockPic1')}</strong>
 
                                 <picture>
                                     <source srcSet={mobileBlock} media="(max-width: 767px)" />
@@ -162,7 +166,7 @@ function Maree() {
 
                             <div className='flexBlock'>
 
-                                <strong>Обновленная версия, позволившая повысить средний чек</strong>
+                                <strong>{t('blockPic2')}</strong>
 
                                 <picture>
                                     <source srcSet={mobileBlock2} media="(max-width: 767px)" />
@@ -176,27 +180,21 @@ function Maree() {
                         </div>
 
                         <div className='purpleBgText'>
-                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>пользователи стали чаще покупать 2-3 товара, за счет очевидной выгоды — а мы увеличили средний чек и уменьшили кол-во чарджбеков.</p>
+                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleStrong')}</strong>{t('purple2strongP')}</p>
                         </div>
                     </div>
 
                     <hr />
 
                     <div>
-                        <h2>Решение 3: Продуктовая страница</h2>
-                        <p><strong>Проблема</strong>- старая PDP не раскрывала ценность продукта. Пользователь попадал туда и видел стандартное: немного текста, “красивый”, но не закрывающий вопросы и не доносящий ценность листинг. </p>
+                        <h2>{t('part3header')}</h2>
+                        <p><strong>{t('part3strong1')}</strong>{t('part3strong1p')}</p>
 
-                        <p>Старая продуктовая страница не раскрывала ценность продукта. Пользователь попадал туда и видел стандартное: немного текста, “красивый”, но не закрывающий вопросы и не доносящий ценность листинг, кнопка “добавить в корзину”.</p>
-
-                        <p>Я продумала <strong>сильный продающий листинг</strong> , в котором каждое фото показывало ценность продукта: эффект, ощущения, результат, формат применения, чистые эко-френдли составы.</p>
-
-                        <p>Так же добавила <strong>блок с видео-отзывами</strong>  (UGC контент) — он отлично сработал как сошиал прув, усиливая доверие и подтверждая эффект продукта в реальном использовании.</p>
-
-                        <strong>Что сделала</strong>
+                        <strong>{t('part3strong2')}</strong>
                         <ul>
-                            <li>Продумала сильный продающий листинг, в котором каждое фото показывало ценность продукта: эффект, ощущения, результат, формат применения, чистые эко-френдли составы</li>
-                            <li>Добавила видео‑отзывы UGC — он отлично сработал как social prove, усиливая доверие и подтверждая эффект продукта в реальном использовании</li>
-                            <li>Добавила новый байблок, о котором говорила выше</li>
+                            <li>{t('part3Li1')}</li>
+                            <li>{t('part3Li2')}</li>
+                            <li>{t('part3Li3')}</li>
                         </ul>
 
                         <div className='otherWeb'>
@@ -216,24 +214,24 @@ function Maree() {
                         </div>
 
                         <div className='purpleBgText'>
-                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>+12 % конверсия PDP, больше времени на странице, чаще кликают «Добавить в корзину».</p>
+                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleStrong')}</strong>{t('purple3strongP')}</p>
                         </div>
                     </div>
 
                     <hr />
 
                     <div>
-                        <h2>Решение 4: Страница “Build your bundle”</h2>
-                        <p><strong>Проблема</strong>- пользователи редко добавляли несколько продуктов, тк не было качественного аппсейла. Не хватало удобного способа показать, как продукты можно сочетать между собой для комплексного решения задач. Это ограничивало рост среднего чека. </p>
+                        <h2>{t('part4header')}</h2>
+                        <p><strong>{t('part4strong1')}</strong>{t('part4strong1p')}</p>
 
-                        <p>Мы разработали и внедрили функцию Build Your Bundle — конструктор, где покупатель может легко подобрать продукты под свои потребности, а за сбор бандла получает выгодную скидку.</p>
+                        <p>{t('part4p1')}</p>
 
-                        <strong>Что сделала</strong>
+                        <strong>{t('part4strong2')}</strong>
                         <ul>
-                            <li>Разработала структуру страницы и логику добавления продуктов в бандл</li>
-                            <li>Сделала визуальное оформление и проработала UX для удобного выбора товаров</li>
-                            <li>Разработала блок с визуальным интерактивным конструктором: добавление товаров и отображение скидки в реальном времени</li>
-                            <li>Продумала UX/UI: простая и понятная механика добавление товаров в бандл через привычный каталог</li>
+                            <li>{t('part4Li1')}</li>
+                            <li>{t('part4Li2')}</li>
+                            <li>{t('part4Li3')}</li>
+                            <li>{t('part4Li4')}</li>
                         </ul>
 
                         <div className='otherWeb'>
@@ -253,21 +251,21 @@ function Maree() {
                         </div>
 
                         <div className='purpleBgText'>
-                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong> за первый месяц среднее количество товаров (3-5 айтемов) в заказе выросло на 25%.</p>
+                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleStrong')}</strong>{t('purple4strongP')}</p>
                         </div>
                     </div>
 
                     <hr />
 
                     <div>
-                        <h2>Решение 5: Прелендинги</h2>
-                        <p><strong>Проблема</strong>- рекламный трафик сливался; прелендинги не усиливали сообщение и не помогали принять решение о покупке.</p>
+                        <h2>{t('part5header')}</h2>
+                        <p><strong>{t('part5strong1')}</strong>{t('part5strong1p')}</p>
 
-                        <strong>Что сделала</strong>
+                        <strong>{t('part5strong2')}</strong>
                         <ul>
-                            <li>Подошла к прелендингам как к самостоятельному UX-продукту: каждый прелендинг — это мини-воронка, которая прогревает интерес, отвечает на возражения и направляет пользователя к покупке.</li>
-                            <li>Провела серию A/B‑тестов: кастомные заходы под оффер, короткие лендинги «5 причин почему тебе нужен этот продукт», паттерны доверия (UGC)</li>
-                            <li>Самыми успешными оказались сторителлинговые прелендинги, которые прогревали через боль → решение → эмоцию.</li>
+                            <li>{t('part5Li1')}</li>
+                            <li>{t('part5Li2')}</li>
+                            <li>{t('part5Li3')}</li>
                         </ul>
 
                         <div className='otherWeb'>
@@ -282,29 +280,29 @@ function Maree() {
 
 
                         <div className='purpleBgText'>
-                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong>рост CTR и ROAS, особенно на холодном трафике (NC ROAS).</p>
+                            <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleStrong')}</strong>{t('purple5strongP')}</p>
                         </div>
                     </div>
 
                     <hr />
 
                     <div>
-                        <h2>Что это дало бренду</h2>
-                        <p>Вместо точечных улучшений — мы выстроили сильную, логичную воронку.</p>
+                        <h2>{t('resultHeader')}</h2>
+                        <p>{t('resultP')}</p>
 
                         <ul>
-                            <li>Вход с рекламой через понятный прелендинг</li>
-                            <li>Убеждение через контент и структуру продуктовой</li>
-                            <li>Мотивация к покупке в корзине</li>
+                            <li>{t('resultLi1')}</li>
+                            <li>{t('resultLi2')}</li>
+                            <li>{t('resultLi3')}</li>
                         </ul>
 
                         <div className='purpleBgText'>
 
-                            <h2>Итог</h2>
+                            <h2>{t('purple5Header')}</h2>
                             <ul>
-                                <li><strong>Конверсия</strong>Значительное увеличение конверсии на всех этапах воронки.</li>
-                                <li><strong>Доверие:</strong> Повышение уровня доверия пользователей к бренду.</li>
-                                <li><strong>Повторные покупки:</strong>Увеличение количества повторных покупок, положительных отзывов и среднего чека.</li>
+                                <li><strong>{t('purple5strong1')}</strong>{t('purple5strong1Li')}</li>
+                                <li><strong>{t('purple5strong2')}</strong>{t('purple5strong2Li')}</li>
+                                <li><strong>{t('purple5strong3')}</strong>{t('purple5strong3Li')}</li>
                             </ul>
                         </div>
                     </div>
@@ -312,8 +310,8 @@ function Maree() {
                 </div>
 
                 <div className='contact'>
-                    <p>Я всегда открыта новым проектам и интересным идеям.</p>
-                    <strong>Если вам откликается мой подход, давайте создадим что-то классное вместе. </strong>
+                    <p>{t('contactP')}</p>
+                    <strong>{t('contactStrong')}</strong>
 
                     <div className='footerButtons hoverButton'>
                         <button onClick={() => handleUrl("mailto:juli.uxui@gmail.com")} style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>

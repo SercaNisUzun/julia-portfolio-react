@@ -25,15 +25,10 @@ header {
         justify-content: space-between;
         padding: 12.8px 44.8px;
 
-        .onlyMobile {
+        .mobileHidden {
             display: none;
         }
 
-        .mobileHidden {
-            display: block;
-            border: 1px #00412D solid;
-            padding: 10px 18px;
-        }
     }
 
     @include respond-to(desktop) {
@@ -50,6 +45,8 @@ header {
             display: block;
             border: 1px #00412D solid;
             padding: 10px 18px;
+            min-width: 10rem;
+            text-align: center;
         }
     }
 
@@ -67,13 +64,12 @@ header {
             display: block;
             border: 1px #00412D solid;
             padding: 10px 18px;
+            min-width: 10rem;
+            text-align: center;
         }
     }
 
     div:nth-child(2) {
-        @include respond-to(tablet) {
-            width: 65%;
-        }
 
         @include respond-to(desktop) {
             width: 65%;
@@ -98,16 +94,6 @@ nav {
         z-index: 1;
         background-color: $bgColor;
         width: 100%;
-
-        @include respond-to(tablet) {
-            position: static;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            padding: 0;
-            font-size: 14px;
-        }
 
         @include respond-to(desktop) {
             position: static;
@@ -153,7 +139,6 @@ nav {
 }
 
 
-
 .navPosition {
     display: flex;
     justify-content: space-between;
@@ -161,9 +146,6 @@ nav {
     height: 44.8px;
     width: 100%;
 
-    @include respond-to(tablet) {
-        width: 30%;
-    }
 
     @include respond-to(desktop) {
         width: 30%;
@@ -188,9 +170,6 @@ nav {
     font-size: 26px;
     height: 26px;
 
-    @include respond-to(tablet) {
-        display: none;
-    }
 
     @include respond-to(desktop) {
         display: none;
@@ -210,5 +189,42 @@ a {
 
     &:active {
         color: #00412D
+    }
+}
+
+.lngBut {
+    border: 2px solid #00412D;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    width: 7.5rem;
+    margin-top: 80%;
+
+    @include respond-to(tablet) {
+        margin-top: 50%;
+    }
+
+    @include respond-to(desktop) {
+        margin-top: 0;
+    }
+
+    @include respond-to(large-desktop) {
+        margin-top: 0;
+    }
+
+    button {
+        border: none;
+        background-color: #00412D;
+        color: aliceblue;
+        height: 100%;
+        width: 3.75rem;
+        font-weight: 600;
+
+    }
+
+
+    :first-child {
+        background-color: $bgColor;
+        color: #00412D;
     }
 }

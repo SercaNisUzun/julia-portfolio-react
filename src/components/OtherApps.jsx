@@ -2,8 +2,11 @@ import React from 'react'
 import Slider from './Slider'
 import PhotoSlider from './photoSlider'
 import { MdOutlineArrowRightAlt } from "react-icons/md";
+import { useTranslation } from 'react-i18next';
 
 function OtherApps() {
+
+    const { t } = useTranslation('otherApps');
 
     const sliderData1 = [
         "Product Design", "Human Design", "Dark UI", "Ui Kit",
@@ -39,8 +42,8 @@ function OtherApps() {
         <div className="appSliderHeight">
 
             <div className='aboutText'>
-                <h2>Human Design - приложение для ежедневных практик самопознания</h2>
-                <p>UX & UI Designer  •  Май — Авг 2020</p>
+                <h2>{t('humanHeader')}</h2>
+                <p>{t('humanDate')}</p>
             </div>
 
             <Slider items={sliderData1} />
@@ -49,12 +52,12 @@ function OtherApps() {
 
                 <div>
 
-                    <strong>Что сделала</strong>
+                    <strong>{t('liHeader')}</strong>
                     <ul>
-                        <li>Сконструировала пользовательский путь: welcome‑экран → геймифицированный онбординг → дашборд с аффирмацией, бодичартом и Daily Advice.</li>
-                        <li>Упаковала сложную теорию в интерактив: кликабельные центры, планеты и типы + карточки для мгновенной расшифровки.</li>
-                        <li>Встроила монетизацию: двухшаговый paywall (спец‑оффер 90 % → подписка).</li>
-                        <li>Задала value‑loop: мульти‑профиль для друзей/клиентов, journey‑пуши и social‑toggle — удерживаем интерес и стимулируем шаринг.</li>
+                        <li>{t('humanLi1')}</li>
+                        <li>{t('humanLi2')}</li>
+                        <li>{t('humanLi3')}</li>
+                        <li>{t('humanLi4')}</li>
                     </ul>
                 </div>
 
@@ -63,7 +66,7 @@ function OtherApps() {
                 </div>
 
                 <div className='purpleBgText'>
-                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong> +18 % к конверсии в триал после внедрения двухэтапного paywall и спец‑оффера, 4 600 установок и 4,6 ★ средний рейтинг в первые 90 дней.</p>
+                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleHeader')}</strong> {t('purple1p')}</p>
                 </div>
 
                 <hr />
@@ -71,8 +74,8 @@ function OtherApps() {
             </div>
 
             <div className='aboutText'>
-                <h2>НутриКампус (MIIN/ Топ-1 сообщество нутрициологов в СНГ)</h2>
-                <p>UX & UI Designer</p>
+                <h2>{t('nutriHeader')}</h2>
+                <p>UX & UI Designer</p>
             </div>
 
             <Slider items={sliderData2} />
@@ -81,14 +84,14 @@ function OtherApps() {
 
                 <div>
 
-                    <strong>Что сделала</strong>
+                    <strong>{t('liHeader')}</strong>
                     <ul>
-                        <li>Собрала ценностное ядро: объединила каталог сертифицированных нутриологов, форум поддержки и базу статей → первая запись на консультацию за 4 тапа.</li>
-                        <li>Переработала IA и UX‑флоу: внедрила карточки нутриологов с бейджами квалификации, instant‑booking и рейтингами.</li>
-                        <li>Запустила комьюнити‑форум: правила и модерация через модалки, быстрые ответы экспертов внутри тредов.</li>
-                        <li>Оптимизировала путь к записи: умные фильтры по симптомам → +25 % конверсии в консультацию.</li>
-                        <li>Контент‑лента статей: выделенные call‑to‑action «Записаться» внутри материалов повышают вовлечённость.</li>
-                        <li>Монетизация: комиссия за запись к нутриологу + подписка на премиум‑контент (paywall A/B‑тест).</li>
+                        <li>{t('nutriLi1')}</li>
+                        <li>{t('nutriLi2')}</li>
+                        <li>{t('nutriLi3')}</li>
+                        <li>{t('nutriLi4')}</li>
+                        <li>{t('nutriLi5')}</li>
+                        <li>{t('nutriLi6')}</li>
                     </ul>
 
                 </div>
@@ -98,7 +101,7 @@ function OtherApps() {
                 </div>
 
                 <div className='purpleBgText'>
-                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong> 10 000 установок и ≈ 1 200 консультаций в первый месяц (рост конверсии к записи +25 %).</p>
+                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleHeader')}</strong> {t('purple2p')}</p>
                 </div>
 
                 <hr />
@@ -106,8 +109,8 @@ function OtherApps() {
             </div>
 
             <div className='aboutText'>
-                <h2>TAXI+ — мобильное приложение такси</h2>
-                <p>UX & UI Designer</p>
+                <h2>{t('taxiHeader')}</h2>
+                <p>UX & UI Designer</p>
             </div>
 
             <Slider items={sliderData3} />
@@ -116,12 +119,12 @@ function OtherApps() {
 
                 <div>
 
-                    <strong>Что сделала</strong>
+                    <strong>{t('liHeader')}</strong>
                     <ul>
-                        <li>Собрала требования и CJM — выделила core‑фичи: заказ, расчёт цены, трекинг маршрута, оплата.</li>
-                        <li>Спроектировала UX‑флоу — 80+ экранов, 4 основных сценария (поездка «сейчас», предзаказ, добавление нескольких остановок, “SOS”).</li>
-                        <li>Собрала интерактивный прототип в Figma — кликабельный, готовый для юзертестов и демонстраций инвесторам.</li>
-                        <li>Сопровождала разработку — спецификации, QA‑сессии, итерации по обратной связи.</li>
+                        <li>{t('taxiLi1')}</li>
+                        <li>{t('taxiLi2')}</li>
+                        <li>{t('taxiLi3')}</li>
+                        <li>{t('taxiLi4')}</li>
                     </ul>
 
                 </div>
@@ -131,7 +134,7 @@ function OtherApps() {
                 </div>
 
                 <div className='purpleBgText'>
-                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong> получили за первый месяц  10К установок и 120 активных водителей.</p>
+                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleHeader')}</strong> {t('purple3p')}</p>
                 </div>
 
                 <hr />
@@ -139,8 +142,8 @@ function OtherApps() {
             </div>
 
             <div className='aboutText'>
-                <h2>My Vet Coach (AstuVet)- приложение “цифровой ветеринар”</h2>
-                <p>UX & UI Designer</p>
+                <h2>{t('vetHeader')}</h2>
+                <p>UX & UI Designer</p>
             </div>
 
             <Slider items={sliderData4} />
@@ -149,12 +152,12 @@ function OtherApps() {
 
                 <div>
 
-                    <strong>Что сделала</strong>
+                    <strong>{t('liHeader')}</strong>
                     <ul>
-                        <li>Спроектировала ключевые разделы My Vet  Coach, Chat‑bot, Tips, Goods, Pet Profile, Notification center, Payments.</li>
-                        <li>MVP созданный за 8 недель для TechPet Conf помог команде презентовать core‑фичи инвесторам.</li>
-                        <li>Разработала и внедрила стратегию монетизации приложения, что позволило заработать $10,000 в первый месяц после запуска.</li>
-                        <li>2 цикла тестирования — исправили боли онбординга, повысили CR подписок.</li>
+                        <li>{t('vetLi1')}</li>
+                        <li>{t('vetLi2')}</li>
+                        <li>{t('vetLi3')}</li>
+                        <li>{t('vetLi4')}</li>
                     </ul>
 
                 </div>
@@ -165,7 +168,7 @@ function OtherApps() {
 
 
                 <div className='purpleBgText'>
-                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong> +20 % к конверсии в подписку и $10 k выручки за первый месяц после запуска, а так же успешная презентация проекта на вет конференции в ЛА и инвесторам.</p>
+                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleHeader')}</strong> {t('purple4p')}</p>
                 </div>
 
                 <hr />
@@ -173,8 +176,8 @@ function OtherApps() {
             </div>
 
             <div className='aboutText'>
-                <h2>Твой наставник - приложение для подбора наставников</h2>
-                <p>UX & UI Designer</p>
+                <h2>{t('mentorHeader')}</h2>
+                <p>UX & UI Designer</p>
             </div>
 
             <Slider items={sliderData5} />
@@ -183,13 +186,13 @@ function OtherApps() {
 
                 <div>
 
-                    <strong>Что сделала</strong>
+                    <strong>{t('liHeader')}</strong>
                     <ul>
-                        <li>Собрала ядро MVP — спроектировала фундаментальные сценарии: поиск наставника, заполнение профиля‑эксперта, заявка на консультацию.</li>
-                        <li>Онбординг для экспертов — опросник с тегами навыков → автоматический рейтинг и выдача в каталоге.</li>
-                        <li>Каталог mentors 1‑клика — быстрый фильтр + карточка «о себе / кейсы» = запись за 3 шага.</li>
-                        <li>Профиль пользователя — единый экран с био, настройками конфиденциальности и ссылками на соцсети</li>
-                        <li>Дизайн‑гид — минималистичная светлая тема + фирменный «mentor‑gold» для CTA, <span style={{ textDecoration: "Line-through" }}>40+ компонентов.</span></li>
+                        <li>{t('mentorLi1')}</li>
+                        <li>{t('mentorLi2')}</li>
+                        <li>{t('mentorLi3')}</li>
+                        <li>{t('mentorLi4')}</li>
+                        <li>{t('mentorLi5')} <span style={{ textDecoration: "Line-through" }}>{t('mentorLispan')}</span></li>
                     </ul>
 
                 </div>
@@ -199,7 +202,7 @@ function OtherApps() {
                 </div>
 
                 <div className='purpleBgText'>
-                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong> 1000 + установок за первую неделю, 14 сфер наставничества и первые платные сессии уже в первый месяц; рейтинг в App Store держится на 3,7 ★, что подтверждает востребованность MVP.</p>
+                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleHeader')}</strong> {t('purple5p')}</p>
                 </div>
 
                 <hr />
@@ -207,8 +210,8 @@ function OtherApps() {
             </div>
 
             <div className='aboutText'>
-                <h2>AMORE VPN — личный VPN-сервис блогера @amocucinare</h2>
-                <p>UX & UI Designer</p>
+                <h2>{t('vpnHeader')}</h2>
+                <p>UX & UI Designer</p>
             </div>
 
             <Slider items={sliderData6} />
@@ -217,12 +220,12 @@ function OtherApps() {
 
                 <div>
 
-                    <strong>Что сделала</strong>
+                    <strong>{t('liHeader')}</strong>
                     <ul>
-                        <li>Собрала ядро MVP: instant-connect, автоподбор «Быстрый сервер», ручной выбор страны, таймер сессии.</li>
-                        <li>Продумала монетизацию: лимит «3 устройства на ключ».</li>
-                        <li>Собрала кликабельный прототип в Figma и передала разработке для быстрой интеграции.</li>
-                        <li>Создала простые анимации для первого экрана и монетки подключения.</li>
+                        <li>{t('vpnLi1')}</li>
+                        <li>{t('vpnLi2')}</li>
+                        <li>{t('vpnLi3')}</li>
+                        <li>{t('vpnLi4')}</li>
                     </ul>
 
                 </div>
@@ -233,7 +236,7 @@ function OtherApps() {
                 </div>
 
                 <div className='purpleBgText'>
-                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>В результате</strong> MVP собран за 3 недели, протестирован на 500+ подписчиках: 86 % сразу подключаются к серверу; оунер готовит запуск платных ключей внутри комьюнити.</p>
+                    <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleHeader')}</strong> {t('purple6p')}</p>
                 </div>
 
             </div>
