@@ -1,12 +1,51 @@
-# React + Vite
+# 🎨 Julia Portfolio – React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website for a UX/UI Designer – built with React.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo  
+🌐 [Visit Site (GitHub Pages)](https://sercanisuzun.github.io/julia-portfolio-react/)  
+> ⚠️ Domain and hosting setup is in progress. A custom domain will be connected later.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📱 Features  
+- ✅ **Responsive** design for 4 screen sizes (mobile-first):  
+  Mobile • Tablet • Desktop • Large Desktop  
+- ⚛️ Built with **React**  
+- 🌐 Routing handled by **React Router DOM**  
+- 🌍 Multilingual: **English & Russian** via `i18next`  
+- 🎨 Styled with **SASS**  
+- 🔎 Basic **SEO** and **semantic HTML** used  
+- 🧑‍🎨 Design provided by the client (UX/UI Designer)
+
+---
+
+## 🛠️ Tech Stack  
+- React  
+- React Router DOM  
+- SASS (SCSS)  
+- i18next  
+- GitHub Pages (for deployment)
+
+---
+
+## 📸 Preview  
+
+| Mobile | Tablet | Desktop |
+|--------|--------|---------|
+| ![Mobile](./src/assets/preview-ss/mobile.png) | ![Tablet](./src/assets/preview-ss/tablet.png) | ![Desktop](./src/assets/preview-ss/desktop.png) |
+
+> Screenshots captured from real responsive layout
+
+---
+
+## 🚀 Getting Started (Local Setup)  
+To run the project locally:
+
+```bash
+git clone https://github.com/SercaNisUzun/julia-portfolio-react.git
+cd julia-portfolio-react
+npm install
+npm start
