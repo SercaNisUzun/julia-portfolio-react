@@ -103,6 +103,8 @@ function Others() {
                     <p>{t('contactP')}</p>
                     <strong>{t('contactStrong')}</strong>
 
+                    <hr />
+
                     <div className='footerButtons hoverButton'>
                         <button onClick={() => handleUrl("mailto:juli.uxui@gmail.com")} style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>
                         <button onClick={() => handleUrl("https://wa.me/905518420420")} style={{ gridArea: 'wp' }}><img src={wp} alt="Whatsapp" />WhatsApp</button>

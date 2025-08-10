@@ -5,10 +5,6 @@
     font-family: Ubuntu;
     line-height: 150%;
 
-    .contact {
-        margin-top: 3.125rem;
-    }
-
     .aboutText {
 
         @include respond-to(tablet) {
@@ -67,6 +63,16 @@
     display: flex;
     justify-content: space-between;
 
+    @include respond-to(desktop) {
+        margin-bottom: 64px;
+        margin-top: 40px;
+    }
+
+    @include respond-to(large-desktop) {
+        margin-bottom: 64px;
+        margin-top: 40px;
+    }
+
 
     button {
         width: 25%;
@@ -110,40 +116,75 @@
 
 #bigScreenBanner {
 
+    h2 {
+        font-size: 22px;
+        font-weight: 700;
+        font-family: Ysabeau Infant;
+
+        @include respond-to(desktop) {
+            font-size: 30px;
+        }
+
+        @include respond-to(large-desktop) {
+            font-size: 30px;
+        }
+    }
+
+    p {
+
+        @include respond-to(desktop) {
+            line-height: 150%;
+        }
+
+        @include respond-to(large-desktop) {
+            line-height: 150%;
+        }
+
+    }
+
     @include respond-to(desktop) {
         width: 30%;
         position: absolute;
-        top: 250px;
+        top: 150px;
         left: 40px;
         line-height: normal;
         padding: 0;
-
-        h2 {
-            font-size: 22px;
-            font-weight: 300;
-        }
     }
 
     @include respond-to(large-desktop) {
         width: 30%;
         position: absolute;
-        top: 250px;
+        top: 175px;
         left: 40px;
         line-height: normal;
         padding: 0;
 
-        h2 {
-            font-size: 22px;
-            font-weight: 300;
-        }
     }
 
 }
 
 .otherBrands {
 
-    .photo-slider {
+    h2 {
+        margin-top: 32px;
+        margin-bottom: 16px;
+        font-size: 22px;
+        font-weight: 700;
+        font-family: Ysabeau Infant;
+        line-height: 150%;
 
+        @include respond-to(desktop) {
+            font-size: 30px;
+        }
+
+        @include respond-to(large-desktop) {
+            font-size: 30px;
+        }
+
+
+    }
+
+    .photo-slider {
 
         .sliderButtons {
             display: flex;
@@ -156,6 +197,18 @@
 
         padding: 0px 10px 10px 10px;
         @include greenBg;
+
+        @include respond-to(tablet) {
+            margin: 40px 0;
+        }
+
+        @include respond-to(desktop) {
+            margin: 40px 0;
+        }
+
+        @include respond-to(large-desktop) {
+            margin: 40px 0;
+        }
 
         &>img {
             height: .5313rem;
@@ -218,6 +271,23 @@
 
     .sliderContainer {
         height: 31.25rem;
+    }
+
+    h2 {
+        margin-top: 32px;
+        margin-bottom: 16px;
+        font-size: 22px;
+        font-weight: 700;
+        font-family: Ysabeau Infant;
+        line-height: 150%;
+
+        @include respond-to(desktop) {
+            font-size: 30px;
+        }
+
+        @include respond-to(large-desktop) {
+            font-size: 30px;
+        }
     }
 
 }

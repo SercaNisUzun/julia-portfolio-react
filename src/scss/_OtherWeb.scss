@@ -1,25 +1,42 @@
 .otherWeb {
+
+    h2 {
+        font-family: Ysabeau Infant;
+        font-weight: 700;
+
+        @include respond-to(desktop) {
+            font-size: 30px;
+        }
+
+        @include respond-to(large-desktop) {
+            font-size: 30px;
+        }
+    }
+
     .singlePhotoSlider {
         height: 230px;
         position: relative;
         @include greenBg;
         padding-bottom: 10px;
-        margin-bottom: 50px;
-        padding: 0 7px;
+        margin: 32px 0 50px;
+        padding: 0 7px 4px;
 
         @include respond-to(tablet) {
             height: 400px;
             padding: 0 10px;
+            margin: 40px 0 60px;
         }
 
         @include respond-to(desktop) {
             height: 500px;
             padding: 0 15px;
+            margin: 40px 0 60px;
         }
 
         @include respond-to(large-desktop) {
             height: 600px;
             padding: 0 15px;
+            margin: 40px 0 60px;
         }
 
         &>img {
@@ -98,6 +115,5 @@
             width: 100%;
         }
     }
-
 
 }

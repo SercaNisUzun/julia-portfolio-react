@@ -7,7 +7,7 @@ header {
 }
 
 .navbar {
-    background-color: $bgColor;
+    background-color: $navColor;
     padding: 12.8px;
     height: 33px;
     display: flex;
@@ -214,17 +214,18 @@ a {
 
     button {
         border: none;
-        background-color: #00412D;
-        color: aliceblue;
         height: 100%;
         width: 3.75rem;
         font-weight: 600;
-
-    }
-
-
-    :first-child {
         background-color: $bgColor;
         color: #00412D;
+
+        &.active {
+            background-color: #00412D;
+            color: aliceblue;
+        }
     }
+
+
+
 }

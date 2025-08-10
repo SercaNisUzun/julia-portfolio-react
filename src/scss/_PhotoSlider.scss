@@ -5,10 +5,23 @@
         overflow: scroll;
         margin: 32px 0 10px 0;
         scroll-behavior: smooth;
+        overflow-y: hidden;
 
         img {
             margin-right: 24px;
             height: 100%;
+        }
+
+        @include respond-to(tablet) {
+            margin: 64px 0 10px 0;
+        }
+
+        @include respond-to(desktop) {
+            margin: 40px 0 10px 0;
+        }
+
+        @include respond-to(large-desktop) {
+            margin: 40px 0 10px 0;
         }
     }
 
@@ -26,8 +39,8 @@
         width: 1.5rem;
 
         @include respond-to(tablet) {
-            height: 1.7rem;
-            width: 1.7rem;
+            height: 2.7rem;
+            width: 2.7rem;
         }
 
         @include respond-to(desktop) {
@@ -67,6 +80,7 @@
         display: flex;
         justify-content: end;
         height: 3rem;
+        margin-top: 1rem;
         margin-bottom: 2rem;
     }
 

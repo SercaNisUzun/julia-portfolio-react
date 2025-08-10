@@ -9,28 +9,31 @@
     p,
     span,
     li {
-        line-height: 150%;
+        line-height: 190%;
     }
 
 
     strong {
         font-weight: 500;
-        margin-right: 3px;
     }
 
     #mareeContainer {
         height: auto;
+        margin: 32px 0;
 
         @include respond-to(tablet) {
             padding: 0 15px 10px 15px;
+            margin: 40px 0;
         }
 
         @include respond-to(desktop) {
             padding: 0 15px 10px 15px;
+            margin: 40px 0;
         }
 
         @include respond-to(large-desktop) {
             padding: 0 15px 10px 15px;
+            margin: 40px 0;
         }
 
         #mareePhoto {
@@ -39,6 +42,14 @@
 
         &:first-child {
             margin-bottom: 20px;
+
+            @include respond-to(desktop) {
+                margin-bottom: 40px;
+            }
+
+            @include respond-to(large-desktop) {
+                margin-bottom: 40px;
+            }
         }
     }
 
@@ -84,7 +95,20 @@
         margin-top: 32px;
         margin-bottom: 16px;
         font-size: 22px;
-        font-weight: 500
+        font-weight: 700;
+        font-family: Ysabeau Infant;
+
+        @include respond-to(tablet) {
+            margin-top: 64px;
+        }
+
+        @include respond-to(desktop) {
+            margin-top: 80px;
+        }
+
+        @include respond-to(large-desktop) {
+            margin-top: 80px;
+        }
     }
 
     ul {
@@ -100,8 +124,26 @@
     margin: 24px 16px 0 16px;
 
     h2 {
+        margin-top: 16px;
+        margin-bottom: 24px;
         font-size: 16px;
         font-weight: 500;
+        font-family: Ubuntu;
+        line-height: 150%;
+
+
+        @include respond-to(tablet) {
+            margin-top: 64px;
+            font-size: 22px;
+        }
+
+        @include respond-to(desktop) {
+            margin-top: 80px;
+        }
+
+        @include respond-to(large-desktop) {
+            margin-top: 80px;
+        }
     }
 
     @include respond-to(tablet) {
@@ -111,7 +153,7 @@
     @include respond-to(desktop) {
         width: 30%;
         position: absolute;
-        top: 200px;
+        top: 150px;
         left: 32px;
         line-height: normal;
     }
@@ -119,7 +161,7 @@
     @include respond-to(large-desktop) {
         width: 30%;
         position: absolute;
-        top: 300px;
+        top: 170px;
         left: 32px;
         line-height: normal;
     }
@@ -128,9 +170,9 @@
 
 .greenBack {
     color: #00412D;
-    font-size: 18px;
+    font-size: 16px;
     font-family: ubuntu;
-    background-color: #FFFAF0;
+    @include greenBg;
     border: 2px solid #00412D;
     font-weight: 500;
     display: flex;
@@ -143,6 +185,7 @@
     @include greenBg;
     padding: 12.8px;
     background-color: #DACBFF;
+    margin-top: 32px;
 
     h2 {
         margin: 0;
@@ -158,6 +201,7 @@
     font-size: 20px;
     vertical-align: middle;
     font-weight: 500;
+    margin-right: .3125rem;
 }
 
 .blockPic {
@@ -170,7 +214,7 @@
 
         display: flex;
         justify-content: space-between;
-
+        margin: 40px 0;
 
         hr {
             display: none;
@@ -182,6 +226,7 @@
         display: flex;
         justify-content: space-between;
         padding: 32px;
+        margin: 40px 0;
 
         hr {
             display: none;
@@ -193,6 +238,7 @@
         display: flex;
         justify-content: space-between;
         padding: 32px;
+        margin: 40px 0;
 
         hr {
             display: none;
@@ -258,4 +304,8 @@
         }
 
     }
+}
+
+#mareePadFix {
+    padding: 0 7px
 }

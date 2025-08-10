@@ -51,7 +51,7 @@ function OtherBrands() {
 
                 </div>
 
-                <div className='singlePhotoSlider'>
+                <div id='mareePadFix' className='singlePhotoSlider'>
                     <img src={vivienBanner} alt="" />
                     <SinglePhotoSlider group='otherWebSlider1' />
                 </div>
@@ -86,7 +86,7 @@ function OtherBrands() {
 
                 </div>
 
-                <div className='singlePhotoSlider'>
+                <div id='mareePadFix' className='singlePhotoSlider'>
                     <img src={astoBanner} alt="" />
                     <SinglePhotoSlider group='otherWebSlider2' />
                 </div>
@@ -127,8 +127,6 @@ function OtherBrands() {
                 <div className='purpleBgText'>
                     <p><MdOutlineArrowRightAlt className='liArrow' /> <strong>{t('purpleHeader')}</strong>{t('purple3p')}</p>
                 </div>
-
-                <hr />
 
             </div>
 

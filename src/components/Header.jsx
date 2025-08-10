@@ -1,13 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { LuMenu } from "react-icons/lu";
 import { RxCross2 } from "react-icons/rx";
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { useTranslation } from 'react-i18next';
+
 
 function Header() {
     const { t } = useTranslation('footerNheader');
     const { i18n } = useTranslation();
+    const currentLang = i18n.language;
+
+    const location = useLocation();
+    const handleHomeClick = () => {
+        if (location.pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            navigate('/');
+        }
+    };
 
     const navigate = useNavigate();
     const [mobileMenuToggle, setMobileMenuToogle] = useState(true);
@@ -73,12 +84,22 @@ function Header() {
                     <nav style={window.innerWidth < 1024 ? { display: display } : {}}>
                         <ul className='hoverButton'>
                             <li onClick={() => navigateAndCloseMenu("/")} className='onlyMobile'>{t('mainpage')}</li>
-                            <li onClick={() => navigate("/")}>{t('portfolio')}</li>
-                            <a href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><li id='cv'>{t('cv')}</li></a>
+                            <li onClick={handleHomeClick}>{t('portfolio')}</li>
+
+                            {currentLang === "en" ? (
+                                <a href={`${import.meta.env.BASE_URL}JuliaLeonkova-UzunCV-en.pdf`} target="_blank" rel="noopener noreferrer">
+                                    <li id='cv'>{t('cv')}</li>
+                                </a>
+                            ) : (
+                                <a href={`${import.meta.env.BASE_URL}JuliaLeonkova-UzunCV-ru.pdf`} target="_blank" rel="noopener noreferrer">
+                                    <li id='cv'>{t('cv')}</li>
+                                </a>
+                            )}
+
                             <li onClick={() => navigateAndCloseMenu("aboutme")}>{t('aboutme')}</li>
                             <div className='lngBut'>
-                                <button onClick={() => i18n.changeLanguage('ru')}>RU</button>
-                                <button onClick={() => i18n.changeLanguage('en')}>EN</button>
+                                <button className={currentLang === 'ru' ? 'active' : ''} onClick={() => i18n.changeLanguage('ru')}>RU</button>
+                                <button className={currentLang === 'en' ? 'active' : ''} onClick={() => i18n.changeLanguage('en')}>EN</button>
                             </div>
                             <li onClick={scrollToBottom} className='mobileHidden' style={{ border: "2px solid #00412D" }}>{t('contact')}</li>
                         </ul>

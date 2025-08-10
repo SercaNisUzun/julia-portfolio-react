@@ -269,7 +269,7 @@ function Maree() {
                         </ul>
 
                         <div className='otherWeb'>
-                            <div className='singlePhotoSlider'>
+                            <div id='mareePadFix' className='singlePhotoSlider'>
 
                                 <img src={mareeBanner} alt="" />
                                 <SinglePhotoSlider group='mareePreLands' />
@@ -309,9 +309,16 @@ function Maree() {
 
                 </div>
 
+                <div>
+
+                </div >
+
                 <div className='contact'>
+
                     <p>{t('contactP')}</p>
                     <strong>{t('contactStrong')}</strong>
+
+                    <hr />
 
                     <div className='footerButtons hoverButton'>
                         <button onClick={() => handleUrl("mailto:juli.uxui@gmail.com")} style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>

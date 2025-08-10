@@ -167,34 +167,25 @@
     .aboutMe {
 
         p {
-            margin: 0;
+            margin: 0 0 8px 0;
         }
 
         @include respond-to(tablet) {
 
             margin: 52.2px 50px;
 
-            hr {
-                display: none;
-            }
         }
 
         @include respond-to(desktop) {
 
-            margin: 64px 70px;
+            margin: 120px 300px;
 
-            hr {
-                display: none;
-            }
         }
 
         @include respond-to(large-desktop) {
 
             margin: 64px 250px;
 
-            hr {
-                display: none;
-            }
         }
     }
 
@@ -252,10 +243,18 @@
 }
 
 hr {
-    margin: 32px 0;
+    margin: 40px 0;
 
     @include respond-to(tablet) {
         margin: 55px 0;
+    }
+
+    @include respond-to(desktop) {
+        margin: 64px 0;
+    }
+
+    @include respond-to(large-desktop) {
+        margin: 70px 0;
     }
 }
 
@@ -274,13 +273,13 @@ hr {
     }
 
     div {
-        margin-bottom: 45px;
+        margin-bottom: 32px;
     }
 
     h3 {
         font-family: Ysabeau Infant;
         font-size: 20px;
-        margin: 0;
+        margin: 0 0 2px 0;
 
         @include respond-to(tablet) {
             font-size: 24px;
@@ -303,7 +302,7 @@ hr {
     }
 
     .content {
-        font-size: 15px;
+        font-size: 14px;
 
         .contentFix {
             margin-bottom: 0;
@@ -370,29 +369,70 @@ hr {
 
 }
 
+.contactHr {
+
+    margin: 40px auto;
+
+    @include respond-to(tablet) {
+        margin: 60px auto;
+    }
+
+    @include respond-to(desktop) {
+        margin: 80px auto;
+        padding: 0 96px;
+    }
+
+    @include respond-to(large-desktop) {
+        margin: 80px auto;
+        padding: 0 250px;
+    }
+}
+
 .contact {
     padding: 0 14.2px 32px 14.2px;
     font-family: Ubuntu;
     text-align: center;
     font-size: 14.2px;
+    margin: 80px auto 0;
+
+
+    p,
+    strong {
+        margin: 0;
+        line-height: 150%;
+        display: block;
+
+        @include respond-to(tablet) {
+            width: 65%;
+            margin: auto;
+        }
+    }
 
     @include respond-to(tablet) {
-        width: 60%;
-        margin: auto;
+        font-size: 1rem;
+        width: 90%;
+        margin: 80px auto;
     }
 
     @include respond-to(desktop) {
+        font-size: 1rem;
         width: 90%;
-        margin: auto;
+        margin: 80px auto;
     }
 
     @include respond-to(large-desktop) {
-
-        margin: auto;
+        font-size: 1rem;
+        margin: 80px auto;
     }
 
     .footerButtons {
         margin-top: 32px;
+
+        @include respond-to(tablet) {
+            display: flex;
+            justify-content: center;
+            height: 44.8px;
+        }
 
         @include respond-to(desktop) {
             display: flex;
@@ -412,6 +452,14 @@ hr {
 }
 
 .sliderText {
+
+    h2 {
+        margin: 40px auto 16px;
+    }
+
+    p {
+        margin-bottom: 24px;
+    }
 
     @include respond-to(desktop) {
         display: flex;

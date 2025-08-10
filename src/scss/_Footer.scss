@@ -70,6 +70,12 @@
         padding: 20px 10px;
         min-width: 170px;
         height: 3.5rem;
+
+        &:hover {
+            font-weight: 900;
+            text-decoration: underline;
+        }
+
     }
 
 }

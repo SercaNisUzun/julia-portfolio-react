@@ -3,12 +3,23 @@ import wp from '../assets/Whatsapp.svg'
 import tg from '../assets/Telegram.svg'
 import mail from '../assets/Gmail.svg'
 import linked from '../assets/Linkedin.svg'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next';
 
 function Footer() {
     const { t } = useTranslation('footerNheader');
     const navigate = useNavigate();
+    const { i18n } = useTranslation();
+    const currentLang = i18n.language;
+
+    const location = useLocation();
+    const handleHomeClick = () => {
+        if (location.pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            navigate('/');
+        }
+    };
 
     const handleUrl = (url) => {
         window.open(url, '_blank');
@@ -26,9 +37,18 @@ function Footer() {
 
 
                         <ul>
-                            <li onClick={() => navigate("/")}>{t('mainpage')}</li>
-                            <li>{t('portfolio')}</li>
-                            <a className='footerLink' href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><li>{t('cv')}</li></a>
+                            <li onClick={handleHomeClick}>{t('portfolio')}</li>
+
+                            {currentLang === "en" ? (
+                                <a className='footerLink' href={`${import.meta.env.BASE_URL}JuliaLeonkova-UzunCV-en.pdf`} target="_blank" rel="noopener noreferrer">
+                                    <li id='cv'>{t('cv')}</li>
+                                </a>
+                            ) : (
+                                <a className='footerLink' href={`${import.meta.env.BASE_URL}JuliaLeonkova-UzunCV-ru.pdf`} target="_blank" rel="noopener noreferrer">
+                                    <li id='cv'>{t('cv')}</li>
+                                </a>
+                            )}
+
                             <li onClick={() => navigate("aboutme")}>{t('aboutme')}</li>
                         </ul>
 
@@ -46,12 +66,12 @@ function Footer() {
 
                 <hr />
 
-                <p id='copyRight'>Copyright 2025</p>
+                <p id='copyRight'>Developed by <a style={{ color: "white", fontSize: "1.1rem" }} href="mailto:sercanuzun0707@gmail.com"><span>Sercan Uzun</span></a></p>
 
 
 
             </div>
-        </footer>
+        </footer >
     )
 }
 

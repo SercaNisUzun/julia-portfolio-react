@@ -8,7 +8,7 @@ body {
 
 .hoverButton {
 
-    li:nth-child(5):hover,
+    li:nth-child(6):hover,
     button:hover {
         box-shadow: 3px 3px #00412D;
         background-color: #DACBFF;
@@ -22,7 +22,8 @@ ul {
 }
 
 a,
-button {
+button,
+.logo {
     cursor: pointer;
 }
 
@@ -36,4 +37,10 @@ button {
         color: #FFFDF6;
     }
 
+}
+
+hr {
+    background-color: #00412D;
+    height: 1.3px;
+    border: none;
 }

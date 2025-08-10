@@ -14,6 +14,8 @@ import { useTranslation } from 'react-i18next';
 function AboutMe() {
 
     const { t } = useTranslation('aboutme');
+    const { i18n } = useTranslation();
+    const currentLang = i18n.language;
 
     const handleUrl = (url) => {
         window.open(url, '_blank');
@@ -38,9 +40,9 @@ function AboutMe() {
 
                         <p>{t('mainText2')}</p>
 
-                        <hr />
-
                     </div>
+
+                    <hr />
 
 
                     <div className='aboutMe2'>
@@ -60,17 +62,46 @@ function AboutMe() {
 
                             <div className='company'>
                                 <h3>MAREE</h3>
-                                <h4>Product/UI/UX Designer</h4>
+                                <h4>Product/UI/UX Designer (E-commerce/DTC Growth)</h4>
                                 <p>{t('mareeDate')}</p>
                             </div>
                             <div className='content'>
                                 <strong>{t('liStrong')}</strong>
-                                <ul>
-                                    <li>- {t('mareeLi1')} <strong>{t('mareeLi1strong')}</strong></li>
-                                    <li>- {t('mareeLi2')} <strong>{t('mareeLi2strong')}</strong> </li>
-                                    <li>- {t('mareeLi3')} <strong>{t('mareeLi3strong')}</strong></li>
-                                    <li>- <strong>{t('mareeLi4strong')}</strong> {t('mareeLi4Li')}</li>
-                                </ul>
+
+                                {currentLang === "en" ? (
+
+                                    <ul>
+                                        <li>- <strong>Boosted advertising ROI</strong> by designing targeted landing and pre-landing pages for
+                                            Facebook and Google Ads, increasing ROAS from <strong>0.80 to 1.80</strong> and achieving CTR rates
+                                            of <strong>15–35%</strong> on cold traffic.</li>
+                                        <li>- <strong>Increased LTV and improved project unit economics</strong> by implementing a subscription
+                                            model on product pages, with upsell and cart blocks tailored for recurring deliveries —
+                                            resulting in a <strong>15% LTV growth.</strong></li>
+                                        <li>- <strong>Raised AOV from $20 to $32</strong> through an upsell strategy and optimized product page
+                                            layouts that encouraged multi-item purchases.</li>
+                                        <li>- <strong>Reduced cart abandonment by 11%</strong> via a redesigned cart experience with sticky CTAs,
+                                            progress bars, and clear multi-item offer messaging.</li>
+                                    </ul>
+
+                                ) : (
+
+                                    <ul>
+                                        <li>- <strong>Для повышения эффективности рекламных кампаний</strong> разработала серию
+                                            целевых лендингов и пре-лендингов, на которые вёл трафик с Facebook и
+                                            Google Ads. Оптимизация структуры и контента позволила повысить ROAS с
+                                            0.80 до 1.80 и достичь среднего CTR 15–35% на холодном трафике.</li>
+                                        <li>- Чтобы увеличить LTV и вывести экономику проекта в плюс, внедрила
+                                            подписочную модель на продуктовых страницах, а также интегрировала
+                                            блоки в корзине и апсейл блока под подписки. Это <strong>обеспечило рост LTV на 15%.</strong></li>
+                                        <li>- Для роста среднего чека <strong>разработала стратегию апсейла,</strong> в результате чего AOV
+                                            вырос с <strong>$20 до $32.</strong></li>
+                                        <li>- Для снижения числа не завершенных покупок <strong>разработала новый дизайн
+                                            корзины</strong> с улучшенным UX, что повысило конверсию в покупку на <strong>11%.</strong></li>
+                                    </ul>
+
+                                )}
+
+
                             </div>
 
                             <div className='company'>
@@ -80,11 +111,34 @@ function AboutMe() {
                             </div>
                             <div className='content'>
                                 <strong>{t('liStrong')}</strong>
-                                <ul>
-                                    <li>- <strong>{t('astoStrong1')}</strong> {t('astoStrong1p')}</li>
-                                    <li>- <strong>{t('astoStrong2')}</strong> {t('astoStrong2p')}</li>
-                                    <li>- <strong>{t('astoStrong3')}</strong> {t('astoStrong3p')}</li>
-                                </ul>
+
+                                {currentLang === "en" ? (
+
+                                    <ul>
+                                        <li>- <strong>Accelerated market entry & investor interest</strong> by designing and launching the MVP of
+                                            MyVetCoach, presented at a major US conference — securing strong investor
+                                            engagement.</li>
+                                        <li>- <strong>Increased conversion by 20%</strong> through optimization of the onboarding flow, user journey
+                                            improvements, and targeted A/B testing.</li>
+                                        <li>- <strong>Generated $10,000 in the first month post-launch</strong> by creating and implementing a
+                                            subscription-based monetization model, integrated into upsell and cart flows.</li>
+                                    </ul>
+
+                                ) : (
+
+                                    <ul>
+                                        <li>- Для успешного выхода на рынок и привлечения инвестиций <strong>разработала MVP
+                                            приложения MyVetCoach</strong> для презентации проекта на крупной ветеринарной
+                                            конференции в США, что способствовало эффективным переговорам с
+                                            инвесторами.</li>
+                                        <li>- Для роста вовлеченности и продаж <strong>увеличила конверсию на 20%</strong> за счёт
+                                            оптимизации пользовательского пути и проведения A/B-тестов.</li>
+                                        <li>- Для монетизации продукта <strong>разработала и внедрила стратегию подписок,</strong> что
+                                            принесло <strong>$10 000 в первый месяц</strong> после запуска.</li>
+                                    </ul>
+
+                                )}
+
                             </div>
 
                             <div className='company'>
@@ -94,15 +148,35 @@ function AboutMe() {
                             </div>
                             <div className='content'>
                                 <p className='contentFix'>{t('nutriHeader1')}</p>
-                                <ul>
-                                    <li>{t('nutriLi11')}</li>
-                                    <li>{t('nutriLi12')}</li>
-                                    <li>{t('nutriLi13')}</li>
-                                </ul>
-                                <p className='contentFix'>{t('nutriHeader2')}</p>
-                                <ul>
-                                    <li>{t('nutriLi2')}</li>
-                                </ul>
+
+                                {currentLang === "en" ? (
+
+                                    <ul>
+                                        <li>- <strong>Boosted consultation booking conversion by 25%</strong> in NutriCampus through a full
+                                            interface redesign, improved IA, and streamlined navigation — attracting <strong>50,000+ new
+                                                users.</strong></li>
+                                        <li>- <strong>Opened a new revenue stream</strong> for NutriCampus by integrating monetization via webinars
+                                            and courses.</li>
+                                        <li>- <strong>Launched MVP of “Your Mentor” platform</strong> from concept to release, enabling the first
+                                            paid sessions and gathering positive user feedback within the first month.</li>
+                                    </ul>
+
+                                ) : (
+
+                                    <ul>
+                                        <li>- <strong>Проект «НутриКампус»</strong> — для увеличения числа записей на консультации и
+                                            удержания пользователей провела редизайн интерфейса, улучшив структуру и
+                                            навигацию. В результате конверсия выросла на <strong>25%,</strong> а аудитория увеличилась на
+                                            <strong>50 000+ новых пользователей.</strong></li>
+                                        <li>- <strong>Монетизация «НутриКампус»</strong> — внедрила модель платного доступа через
+                                            вебинары и курсы, что открыло новый источник дохода для платформы.</li>
+                                        <li>- <strong>Проект «Твой Наставник»</strong> — руководила разработкой дизайна и релизом MVP
+                                            менторской платформы, обеспечив быстрый выход продукта на рынок и
+                                            получение первых платных сессий и положительных отзывов от пользователей.</li>
+                                    </ul>
+
+                                )}
+
                             </div>
 
                             <div className='company'>
@@ -197,6 +271,8 @@ function AboutMe() {
                 <div className='contact'>
                     <p>{t('contactText')}</p>
                     <strong>{t('contactStrong')}</strong>
+
+                    <hr />
 
                     <div className='footerButtons hoverButton'>
                         <button onClick={() => handleUrl("mailto:juli.uxui@gmail.com")} style={{ gridArea: 'm' }}><img src={mail} alt="Gmail" />E-mail</button>

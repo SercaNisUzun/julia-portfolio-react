@@ -13,6 +13,8 @@ import { useTranslation } from 'react-i18next';
 function MainPage() {
     const { t } = useTranslation('mainpage');
     const navigate = useNavigate();
+    const { i18n } = useTranslation();
+    const currentLang = i18n.language;
 
     const skills = [
         'UX Research',
@@ -49,7 +51,15 @@ function MainPage() {
                         <h2>{t('mainText')}</h2>
 
                         <div className='mainButton hoverButton'>
-                            <a href="/JuliaLeonkovaCVru.pdf" target="_blank" rel="noopener noreferrer"><button>{t('cv')}</button></a>
+                            {currentLang === "en" ? (
+                                <a href={`${import.meta.env.BASE_URL}JuliaLeonkova-UzunCV-en.pdf`} target="_blank" rel="noopener noreferrer">
+                                    <button>{t('cv')}</button>
+                                </a>
+                            ) : (
+                                <a href={`${import.meta.env.BASE_URL}JuliaLeonkova-UzunCV-ru.pdf`} target="_blank" rel="noopener noreferrer">
+                                    <button>{t('cv')}</button>
+                                </a>
+                            )}
                         </div>
 
                     </div>
